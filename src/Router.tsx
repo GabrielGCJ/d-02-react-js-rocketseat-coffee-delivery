@@ -7,13 +7,13 @@ import { CheckoutPage } from './pages/CheckoutPage/CheckoutPage'
 import { SuccessPage } from './pages/SuccessPage/SucessPage'
 
 export const Router = () => {
-    return (
-      <Routes>
-        <Route path="/" element={<DefaultLayout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
-          <Route path="/success" element={<SuccessPage />} />
-        </Route>
-      </Routes>
-    )
-  }
+  return (
+    <Routes>
+      <Route path="/" element={<DefaultLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/success" element={<SuccessPage />} />
+      </Route>
+    </Routes>
+  )
+}
