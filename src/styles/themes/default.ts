@@ -1,21 +1,24 @@
 export const defaultTheme = {
   white: '#FFF',
 
-  'gray-100': '#E1E1E6',
-  'gray-300': '#C4C4CC',
-  'gray-400': '#8D8D99',
-  'gray-500': '#7C7C8A',
-  'gray-600': '#323238',
-  'gray-700': '#29292E',
-  'gray-800': '#202024',
-  'gray-900': '#121214',
+  background: '#FAFAFA',
 
-  'green-300': '#00B37E',
-  'green-500': '#00875F',
-  'green-700': '#015F43',
+  'gray-100': '#FFFFFF', // White
+  'gray-200': '#FAFAFA', // Background
+  'gray-300': '#F3F2F2', // Base-card
+  'gray-400': '#EDEDED', // Base-input
+  'gray-500': '#E6E5E5', // Base-button
+  'gray-600': '#D7D5D5', // Base-hover
+  'gray-700': '#8D8686', // Base-label
+  'gray-800': '#574F4D', // Base-text
+  'gray-900': '#403937', // Base-subtitle
+  'gray-1000': '#272221', // Base-title
 
-  'red-500': '#AB222E',
-  'red-700': '#7A1921',
+  'yellow-300': '#F1E9C9', // Yellow-light
+  'yellow-600': '#DBAC2C', // Yellow
+  'yellow-900': '#C47F17', // Yellow-dark
 
-  'yellow-500': '#FBA94C',
+  'purple-300': '#EBE5F9', // Purple-light
+  'purple-600': '#8047F8', // Purple
+  'purple-900': '#4B2995', // Purple-dark
 }
