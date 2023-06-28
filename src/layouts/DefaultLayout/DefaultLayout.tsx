@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom'
 import { Header } from "../../components/Header/Header"
 
 export const DefaultLayout = () => {
@@ -5,6 +6,7 @@ export const DefaultLayout = () => {
         <div>
             <Header/>
             <h1>DefaultLayout</h1>
+            <Outlet/>
         </div>
     )
 }

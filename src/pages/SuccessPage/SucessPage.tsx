@@ -1,5 +1,5 @@
 export const SuccessPage = () => {
     return(
-        <h1>Checkout</h1>
+        <h1>Success</h1>
     )
 }
