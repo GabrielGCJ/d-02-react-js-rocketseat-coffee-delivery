@@ -5,7 +5,6 @@ export const DefaultLayout = () => {
   return (
     <div>
       <Header />
-      <h1>DefaultLayout</h1>
       <Outlet />
     </div>
   )
