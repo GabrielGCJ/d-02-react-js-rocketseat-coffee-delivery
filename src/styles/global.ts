@@ -6,6 +6,22 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
-    background-color: ${(props) => props.theme['gray-500']};
+    
 }
+
+body{
+    background-color: ${(props) => props.theme['gray-200']};
+    color: ${(props) => props.theme['gray-1000']};
+    -webkit-font-smoothing: antialiased ;
+    
+}
+
+body, input, textarea, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+
 `
