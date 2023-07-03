@@ -22,8 +22,8 @@ export const Header = () => {
 
       <CartLocationContainer>
         <LocationContainer>
-          <MapPin size={26} weight="fill" color="#8047F8" />
-          <p>Rio de Janeiro, RJ</p>
+          <MapPin size={26} weight="fill" /* color="#8047F8" */ />
+          <p>São José do Vale do Rio Preto, RJ</p>
         </LocationContainer>
 
         <NavLink to="/checkout">
