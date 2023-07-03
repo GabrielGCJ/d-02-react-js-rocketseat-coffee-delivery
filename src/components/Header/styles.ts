@@ -6,20 +6,31 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   height: 6.5rem;
+  font-size: 1rem;
 
   padding: 0rem 10rem 0rem;
 
   width: 100%;
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 780px) {
     padding: 0% 7.22% 0%;
+
+    font-size: 0.7rem;
   }
 
-  @media screen and (max-width: 392px) {
-    padding: 0% 7.22% 0%;
-
+  @media screen and (max-width: 460px) {
+    padding: 0% 5% 0%;
+    font-size: 0.6rem;
     img {
-      width: 80%;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 286px) {
+    padding: 0% 2% 0%;
+    font-size: 0.5rem;
+    img {
+      width: 100%;
     }
   }
 `
@@ -29,6 +40,8 @@ export const LogoContainer = styled.div`
   flex-direction: row;
   align-items: center;
   width: 100%;
+
+  padding-right: 1rem;
 `
 
 export const CartLocationContainer = styled.div`
@@ -57,4 +70,8 @@ export const LocationContainer = styled.div`
   gap: 0.5rem;
   padding: 1rem;
   border-radius: 8px;
+
+  svg {
+    color: ${(props) => props.theme['purple-600']};
+  }
 `
