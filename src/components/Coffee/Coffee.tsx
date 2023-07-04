@@ -6,6 +6,7 @@ import {
   CoffeeExternalContainer,
   CoffeeInternalContainer,
   DescriptionContainer,
+  PriceAndQuantityContainer,
   TagsContainer,
   TitleContainer,
 } from './styles'
@@ -26,6 +27,9 @@ export const Coffee = () => {
         <DescriptionContainer>
           <p>O tradicional café feito com água quente e grãos moídos</p>
         </DescriptionContainer>
+        <PriceAndQuantityContainer>
+          
+        </PriceAndQuantityContainer>
       </CoffeeInternalContainer>
     </CoffeeExternalContainer>
   )
