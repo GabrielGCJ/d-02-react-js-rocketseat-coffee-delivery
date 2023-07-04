@@ -1,7 +1,14 @@
 import coffeTradicional from '../../assents/coffee-types/expresso-tradicional.svg'
-import traditionalTag from '../../assents/coffee-tags/tag1-tradicional.svg'
-import geladoTag from '../../assents/coffee-tags/tag2-gelado.svg'
+// import traditionalTag from '../../assents/coffee-tags/tag1-tradicional.svg'
+// import geladoTag from '../../assents/coffee-tags/tag2-gelado.svg'
 import shopImg from '../../assents/shoppingCartSimplePurple.svg'
+import {
+  tag1tradicional,
+  tag2gelado,
+  tag3comLeite,
+  tag4especial,
+  tag5alcoolico,
+} from '../../assents'
 
 import {
   CoffeeExternalContainer,
@@ -24,9 +31,11 @@ export const Coffee = () => {
           <img src={coffeTradicional} alt="" />
         </CoffeeTypeContaner>
         <TagsContainer>
-          <img src={traditionalTag} alt="" />
-          <img src={geladoTag} alt="" />
-          <img src={geladoTag} alt="" />
+          <img src={tag1tradicional} alt="" />
+          {/* <img src={tag2gelado} alt="" /> */}
+          {/* <img src={tag3comLeite} alt="" /> */}
+          {/* <img src={tag4especial} alt="" /> */}
+          {/* <img src={tag5alcoolico} alt="" /> */}
         </TagsContainer>
         <TitleContainer>
           <h2>Expresso Tradicional</h2>

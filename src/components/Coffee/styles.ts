@@ -13,12 +13,11 @@ export const CoffeeInternalContainer = styled.div`
   width: 256px;
   height: 310px;
 
-  /* background: ${(props) => props.theme['gray-300']}; */
-  background: red;
+  background: ${(props) => props.theme['gray-300']};
 `
 
 export const CoffeeTypeContaner = styled.div`
-  margin-top: calc(0px - 1.5rem - 6px);
+  margin-top: calc(0px - 16px - 6px);
   img {
     width: 120px;
   }
@@ -29,20 +28,24 @@ export const TagsContainer = styled.div`
   align-items: center;
 
   img {
-    padding: 0rem 0.2rem;
+    padding: 0 3.2px;
   }
 `
 
 export const TitleContainer = styled.div`
   text-align: center;
   font-family: 'Baloo 2';
-  font-size: 1vw;
+  font-size: 15px;
   line-height: 1.2;
+  padding: 14px 0;
 `
 
 export const DescriptionContainer = styled.div`
-  font-size: 1vw;
+  font-size: 14px;
   text-align: center;
+  padding-bottom: 40px;
+  width: 216px;
+  color: ${(props) => props.theme['gray-700']};
 `
 
 export const PriceAndQuantityContainer = styled.div`
@@ -56,6 +59,8 @@ export const PriceContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: last baseline;
+
+  padding-right: 10px;
 `
 
 export const QuantityContainer = styled.div`
@@ -64,6 +69,8 @@ export const QuantityContainer = styled.div`
   align-items: center;
   justify-content: center;
 
+  /* padding: 20px; */
+
   width: 72px;
   height: 38px;
   border-radius: 8px;
@@ -71,7 +78,7 @@ export const QuantityContainer = styled.div`
   background-color: ${(props) => props.theme['gray-500']};
 
   span {
-    padding: 0rem 0.5rem;
+    padding: 0 8px;
   }
 
   button {
@@ -83,4 +90,6 @@ export const QuantityContainer = styled.div`
 export const ShoppingCarContainer = styled.div`
   display: flex;
   align-items: center;
+
+  padding-left: 10px;
 `
