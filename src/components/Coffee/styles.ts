@@ -38,4 +38,42 @@ export const DescriptionContainer = styled.div`
   text-align: center;
 `
 
-export const PriceAndQuantityContainer = styled.div``
+export const PriceAndQuantityContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+`
+
+export const PriceContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: last baseline;
+`
+
+export const QuantityContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 72px;
+  height: 38px;
+  border-radius: 8px;
+
+  background-color: ${(props) => props.theme['gray-500']};
+
+  span {
+    padding: 0rem 0.5rem;
+  }
+
+  button {
+    border: transparent;
+    background-color: ${(props) => props.theme['gray-500']};
+  }
+`
+
+export const ShoppingCarContainer = styled.div`
+  display: flex;
+  align-items: center ;
+`
