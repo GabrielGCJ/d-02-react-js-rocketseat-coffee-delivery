@@ -17,6 +17,13 @@ export const CoffeeInternalContainer = styled.div`
   background: red;
 `
 
+export const CoffeeTypeContaner = styled.div`
+  margin-top: calc(0px - 1.5rem - 6px);
+  img {
+    width: 120px;
+  }
+`
+
 export const TagsContainer = styled.div`
   display: flex;
   align-items: center;
@@ -75,5 +82,5 @@ export const QuantityContainer = styled.div`
 
 export const ShoppingCarContainer = styled.div`
   display: flex;
-  align-items: center ;
+  align-items: center;
 `
