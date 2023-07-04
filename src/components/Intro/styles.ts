@@ -42,6 +42,13 @@ export const FocusMessageContainer = styled.div`
     font-size: 3vw;
     line-height: 1.2;
     /* word-spacing: -2px; */
+
+    @media screen and (max-width: 650px) {
+      font-size: 4vw;
+    }
+    /* @media screen and (max-width: 460px) {
+      padding-bottom: 2.3vw;
+    } */
   }
 `
 
@@ -51,10 +58,10 @@ export const SecondaryMessageContainer = styled.div`
   width: 100%;
   font-size: 1.5vw;
   @media screen and (max-width: 650px) {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
   @media screen and (max-width: 460px) {
-    padding-bottom: 2rem;
+    padding-bottom: 2.3rem;
   }
 `
 
