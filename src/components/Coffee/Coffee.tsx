@@ -6,6 +6,7 @@ import shopImg from '../../assents/shoppingCartSimplePurple.svg'
 import {
   CoffeeExternalContainer,
   CoffeeInternalContainer,
+  CoffeeTypeContaner,
   DescriptionContainer,
   PriceAndQuantityContainer,
   PriceContainer,
@@ -19,7 +20,9 @@ export const Coffee = () => {
   return (
     <CoffeeExternalContainer>
       <CoffeeInternalContainer>
-        <img src={coffeTradicional} alt="" />
+        <CoffeeTypeContaner>
+          <img src={coffeTradicional} alt="" />
+        </CoffeeTypeContaner>
         <TagsContainer>
           <img src={traditionalTag} alt="" />
           <img src={geladoTag} alt="" />
@@ -37,9 +40,9 @@ export const Coffee = () => {
             <h2>9,90</h2>
           </PriceContainer>
           <QuantityContainer>
-            <button>+</button>
-            <span id="valorContador">0</span>
             <button>-</button>
+            <span id="valorContador">0</span>
+            <button>+</button>
           </QuantityContainer>
           <ShoppingCarContainer>
             <img src={shopImg} alt="" />
