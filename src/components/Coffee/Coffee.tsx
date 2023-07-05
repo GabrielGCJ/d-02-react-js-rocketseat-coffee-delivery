@@ -23,34 +23,45 @@ import {
   TitleContainer,
 } from './styles'
 
-export const Coffee = () => {
+export const Coffee = ({
+  img,
+  name,
+  tag1,
+  tag2,
+  tag3,
+  tag4,
+  tag5,
+  text,
+  price,
+  quantity,
+}) => {
   return (
     <CoffeeExternalContainer>
       <CoffeeInternalContainer>
         <CoffeeTypeContaner>
-          <img src={coffeTradicional} alt="" />
+          <img src={img} alt="" />
         </CoffeeTypeContaner>
         <TagsContainer>
-          <img src={tag1tradicional} alt="" />
-          {/* <img src={tag2especial} alt="" /> */}
-          {/* <img src={tag3comLeite} alt="" /> */}
-          {/* <img src={tag4alcoolico} alt="" /> */}
-          {/* <img src={tag5gelado} alt="" /> */}
+          {tag1 === true ? <img src={tag1tradicional} alt="" /> : null}
+          {tag2 === true ? <img src={tag2especial} alt="" /> : null}
+          {tag3 === true ? <img src={tag3comLeite} alt="" /> : null}
+          {tag4 === true ? <img src={tag4alcoolico} alt="" /> : null}
+          {tag5 === true ? <img src={tag5gelado} alt="" /> : null}
         </TagsContainer>
         <TitleContainer>
-          <h2>Expresso Tradicional</h2>
+          <h2>{name}</h2>
         </TitleContainer>
         <DescriptionContainer>
-          <p>O tradicional café feito com água quente e grãos moídos</p>
+          <p>{text}</p>
         </DescriptionContainer>
         <PriceAndQuantityContainer>
           <PriceContainer>
             <p>R$</p>
-            <h2>9,90</h2>
+            <h2>{price.toFixed(2).replace('.', ',')}</h2>
           </PriceContainer>
           <QuantityContainer>
             <button>-</button>
-            <span id="valorContador">0</span>
+            <span id="valorContador">{quantity}</span>
             <button>+</button>
           </QuantityContainer>
           <ShoppingCarContainer>
