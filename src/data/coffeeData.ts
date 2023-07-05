@@ -30,7 +30,7 @@ export interface coffeeDataType {
   quantity: number
 }
 
-export const coffeeData: coffeeDataType[] = [
+export const CoffeeData = [
   {
     id: '001',
     name: 'Expresso Tradicional',
