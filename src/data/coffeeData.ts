@@ -1,5 +1,24 @@
+// import { tag1tradicional } from '../assents'
+import {
+  expressoTradicionalImg,
+  expressoAmericanoImg,
+  expressoCremosoImg,
+  expressoGeladoImg,
+  cafeComLeiteImg,
+  latteImg,
+  capuccinoImg,
+  macchiatoImg,
+  mocaccinoImg,
+  chocolateQuenteImg,
+  cubanoImg,
+  havaianoImg,
+  arabeImg,
+  irlandesImg,
+} from '../assents'
+
 export interface coffeeDataType {
   id: string
+  img: any
   name: string
   tag1: boolean
   tag2: boolean
@@ -11,10 +30,11 @@ export interface coffeeDataType {
   quantity: number
 }
 
-export const coffeeData = [
+export const coffeeData: coffeeDataType[] = [
   {
     id: '001',
     name: 'Expresso Tradicional',
+    img: expressoTradicionalImg,
     tag1: true,
     tag2: false,
     tag3: false,
@@ -27,6 +47,7 @@ export const coffeeData = [
   {
     id: '002',
     name: 'Expresso Americano',
+    img: expressoAmericanoImg,
     tag1: true,
     tag2: false,
     tag3: false,
@@ -39,6 +60,7 @@ export const coffeeData = [
   {
     id: '003',
     name: 'Expresso Cremoso',
+    img: expressoCremosoImg,
     tag1: true,
     tag2: false,
     tag3: false,
@@ -51,6 +73,7 @@ export const coffeeData = [
   {
     id: '004',
     name: 'Expresso Gelado',
+    img: expressoGeladoImg,
     tag1: true,
     tag2: true,
     tag3: false,
@@ -63,6 +86,7 @@ export const coffeeData = [
   {
     id: '005',
     name: 'Café com Leite',
+    img: cafeComLeiteImg,
     tag1: true,
     tag2: false,
     tag3: true,
@@ -75,6 +99,7 @@ export const coffeeData = [
   {
     id: '006',
     name: 'Latte',
+    img: latteImg,
     tag1: true,
     tag2: false,
     tag3: true,
@@ -87,6 +112,7 @@ export const coffeeData = [
   {
     id: '007',
     name: 'Capuccino',
+    img: capuccinoImg,
     tag1: true,
     tag2: false,
     tag3: true,
@@ -99,6 +125,7 @@ export const coffeeData = [
   {
     id: '008',
     name: 'Macchiato',
+    img: macchiatoImg,
     tag1: true,
     tag2: false,
     tag3: true,
@@ -111,6 +138,7 @@ export const coffeeData = [
   {
     id: '009',
     name: 'Mocaccino',
+    img: mocaccinoImg,
     tag1: true,
     tag2: false,
     tag3: true,
@@ -123,6 +151,7 @@ export const coffeeData = [
   {
     id: '010',
     name: 'Chocolate Quente',
+    img: chocolateQuenteImg,
     tag1: false,
     tag2: false,
     tag3: true,
@@ -135,6 +164,7 @@ export const coffeeData = [
   {
     id: '011',
     name: 'Cubano',
+    img: cubanoImg,
     tag1: false,
     tag2: true,
     tag3: false,
@@ -147,6 +177,7 @@ export const coffeeData = [
   {
     id: '012',
     name: 'Havaiano',
+    img: havaianoImg,
     tag1: false,
     tag2: false,
     tag3: false,
@@ -159,6 +190,7 @@ export const coffeeData = [
   {
     id: '013',
     name: 'Árabe',
+    img: arabeImg,
     tag1: false,
     tag2: false,
     tag3: false,
@@ -171,6 +203,7 @@ export const coffeeData = [
   {
     id: '014',
     name: 'Irlandês',
+    img: irlandesImg,
     tag1: false,
     tag2: false,
     tag3: false,
