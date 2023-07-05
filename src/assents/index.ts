@@ -23,7 +23,7 @@ import havaianoImg from './coffee-types/havaiano.svg'
 import irlandesImg from './coffee-types/irlandes.svg'
 import latteImg from './coffee-types/latte.svg'
 import macchiatoImg from './coffee-types/macchiato.svg'
-import mochaccinoImg from './coffee-types/mochaccino.svg'
+import mocaccinoImg from './coffee-types/mocaccino.svg'
 
 export {
   shoppingCartImg,
@@ -49,5 +49,5 @@ export {
   irlandesImg,
   latteImg,
   macchiatoImg,
-  mochaccinoImg,
+  mocaccinoImg,
 }
