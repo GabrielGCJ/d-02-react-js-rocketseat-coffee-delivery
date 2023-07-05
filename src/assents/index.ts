@@ -5,10 +5,10 @@ import coffeeDeliveryLogo from './coffeeDeliveryLogo.svg'
 import buttonCart from './buttonCart.svg'
 
 import tag1tradicional from './coffee-tags/tag1-tradicional.svg'
-import tag2gelado from './coffee-tags/tag2-gelado.svg'
+import tag2especial from './coffee-tags/tag2-especial.svg'
 import tag3comLeite from './coffee-tags/tag3-comLeite.svg'
-import tag4especial from './coffee-tags/tag4-especial.svg'
-import tag5alcoolico from './coffee-tags/tag5-alcoolico.svg'
+import tag4alcoolico from './coffee-tags/tag4-alcoolico.svg'
+import tag5gelado from './coffee-tags/tag5-gelado.svg'
 
 import arabeImg from './coffee-types/arabe.svg'
 import cafeComLeiteImg from './coffee-types/cafe-com-leite.svg'
@@ -32,10 +32,10 @@ export {
   coffeeDeliveryLogo,
   buttonCart,
   tag1tradicional,
-  tag2gelado,
+  tag2especial,
   tag3comLeite,
-  tag4especial,
-  tag5alcoolico,
+  tag4alcoolico,
+  tag5gelado,
   arabeImg,
   cafeComLeiteImg,
   capuccinoImg,

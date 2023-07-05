@@ -1,4 +1,17 @@
-const coffeeData = [
+export interface coffeeDataType {
+  id: string
+  name: string
+  tag1: boolean
+  tag2: boolean
+  tag3: boolean
+  tag4: boolean
+  tag5: boolean
+  text: string
+  price: number
+  quantity: number
+}
+
+export const coffeeData = [
   {
     id: '001',
     name: 'Expresso Tradicional',
