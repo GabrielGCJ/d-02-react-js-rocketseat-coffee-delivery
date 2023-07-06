@@ -1,4 +1,3 @@
-// import { CoffeeData } from '../../data/CoffeeData'
 import { CoffeeData } from '../../data/coffeeData'
 import { Coffee } from '../Coffee/Coffee'
 import {
@@ -21,6 +20,7 @@ export const CoffeeList = () => {
             return (
               <Coffee
                 key={coffee.id}
+                id={coffee.id}
                 img={coffee.img}
                 name={coffee.name}
                 tag1={coffee.tag1}

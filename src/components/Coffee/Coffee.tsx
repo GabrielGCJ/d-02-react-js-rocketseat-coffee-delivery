@@ -22,6 +22,7 @@ import {
   TagsContainer,
   TitleContainer,
 } from './styles'
+import { coffeeDataType } from '../../data/coffeeData'
 
 export const Coffee = ({
   img,
@@ -34,7 +35,7 @@ export const Coffee = ({
   text,
   price,
   quantity,
-}) => {
+}: coffeeDataType) => {
   return (
     <CoffeeExternalContainer>
       <CoffeeInternalContainer>
