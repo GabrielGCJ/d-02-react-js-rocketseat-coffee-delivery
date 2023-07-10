@@ -24,7 +24,11 @@ export const CoffeeListExternalContainer = styled.div`
     font-size: 0.5rem;
   }
 `
-export const CoffeeListInternalContainer = styled.div``
+export const CoffeeListInternalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+`
 
 export const CoffeeText = styled.div`
   text-align: start;
@@ -33,14 +37,23 @@ export const CoffeeText = styled.div`
   padding: 10px 0 30px 0;
 `
 
-export const AllCoffees = styled.div`
-  background-color: blue;
+export const AllCoffeesContainer = styled.div`
+  background-color: purple;
+
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  row-gap: 32px;
-  column-gap: 1rem;
   width: 100%;
+
+  padding: 10px;
+`
+
+export const AllCoffees = styled.div`
+  background-color: blue;
+  justify-content: start;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 `
