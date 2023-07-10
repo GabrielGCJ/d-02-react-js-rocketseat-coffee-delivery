@@ -10,8 +10,8 @@ export const CoffeeInternalContainer = styled.div`
 
   border-radius: 0px 30px 0px 30px;
 
-  width: 256px;
-  height: 310px;
+  width: 16rem;
+  height: 19.375rem;
 
   background: ${(props) => props.theme['gray-300']};
 `
@@ -19,7 +19,7 @@ export const CoffeeInternalContainer = styled.div`
 export const CoffeeTypeContaner = styled.div`
   margin-top: calc(0px - 16px - 6px);
   img {
-    width: 120px;
+    width: 7.5rem;
   }
 `
 
@@ -28,23 +28,23 @@ export const TagsContainer = styled.div`
   align-items: center;
 
   img {
-    padding: 0 3.2px;
+    padding: 0 0.2rem;
   }
 `
 
 export const TitleContainer = styled.div`
   text-align: center;
   font-family: 'Baloo 2';
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.2;
-  padding: 14px 0;
+  padding: 0.875rem 0;
 `
 
 export const DescriptionContainer = styled.div`
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: center;
-  padding-bottom: 40px;
-  width: 216px;
+  padding-bottom: 2.5rem;
+  width: 13.5rem;
   color: ${(props) => props.theme['gray-700']};
 `
 
@@ -60,7 +60,7 @@ export const PriceContainer = styled.div`
   flex-direction: row;
   align-items: last baseline;
 
-  padding-right: 10px;
+  padding-right: 0.625rem;
 `
 
 export const QuantityContainer = styled.div`
@@ -71,14 +71,14 @@ export const QuantityContainer = styled.div`
 
   /* padding: 20px; */
 
-  width: 72px;
-  height: 38px;
+  width: 4.5rem;
+  height: 2.375rem;
   border-radius: 8px;
 
   background-color: ${(props) => props.theme['gray-500']};
 
   span {
-    padding: 0 8px;
+    padding: 0 0.5rem;
   }
 
   button {
@@ -91,5 +91,5 @@ export const ShoppingCarContainer = styled.div`
   display: flex;
   align-items: center;
 
-  padding-left: 10px;
+  padding-left: 0.625rem;
 `
