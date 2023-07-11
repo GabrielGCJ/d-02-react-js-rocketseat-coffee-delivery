@@ -1,3 +1,4 @@
+import { useContext } from 'react'
 import { CoffeeData } from '../../data/coffeeData'
 import { Coffee } from '../Coffee/Coffee'
 import {
@@ -7,8 +8,11 @@ import {
   CoffeeListInternalContainer,
   CoffeeText,
 } from './styled'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 export const CoffeeList = () => {
+  const { coffeeInfo } = useContext(CoffeeContext)
+
   return (
     <CoffeeListExternalContainer>
       <CoffeeListInternalContainer>
@@ -18,7 +22,7 @@ export const CoffeeList = () => {
 
         <AllCoffeesContainer>
           <AllCoffees>
-            {CoffeeData.map((coffee) => {
+            {coffeeInfo.map((coffee) => {
               return (
                 <Coffee
                   key={coffee.id}

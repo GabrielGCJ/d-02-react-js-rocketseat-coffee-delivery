@@ -23,8 +23,11 @@ import {
   TitleContainer,
 } from './styles'
 import { coffeeDataType } from '../../data/coffeeData'
+import { useContext } from 'react'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 export const Coffee = ({
+  id,
   img,
   name,
   tag1,
@@ -36,6 +39,18 @@ export const Coffee = ({
   price,
   quantity,
 }: coffeeDataType) => {
+  const { addCoffee, decreaseCoffee } = useContext(CoffeeContext)
+
+  const handleDecreaseCoffee = () => {
+    decreaseCoffee(id)
+    // console.log('handleDecreaseCoffee')
+  }
+
+  const handleAddCoffee = () => {
+    addCoffee(id)
+    // console.log('handleAddCoffee')
+  }
+
   return (
     <CoffeeExternalContainer>
       <CoffeeInternalContainer>
@@ -61,9 +76,9 @@ export const Coffee = ({
             <h2>{price.toFixed(2).replace('.', ',')}</h2>
           </PriceContainer>
           <QuantityContainer>
-            <button>-</button>
+            <button onClick={handleDecreaseCoffee}>-</button>
             <span id="valorContador">{quantity}</span>
-            <button>+</button>
+            <button onClick={handleAddCoffee}>+</button>
           </QuantityContainer>
           <ShoppingCarContainer>
             <img src={shopImg} alt="" />
