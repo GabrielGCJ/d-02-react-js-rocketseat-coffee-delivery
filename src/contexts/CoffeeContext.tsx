@@ -3,7 +3,8 @@ import { CoffeeData, coffeeDataType } from '../data/coffeeData'
 
 interface CreateContextType {
   coffeeInfo: coffeeDataType[]
-  //   setcoffeeInfo: () => void
+  addCoffee: (id: string) => void
+  decreaseCoffee: (id: string) => void
 }
 
 export const CoffeeContext = createContext({} as CreateContextType)
@@ -13,10 +14,34 @@ interface CoffeeContextProviderProps {
 }
 
 export const CoffeeProvider = ({ children }: CoffeeContextProviderProps) => {
-  const [coffeeInfo, setcoffeeInfo] = useState(CoffeeData)
+  const [coffeeInfo, setCoffeeInfo] = useState(CoffeeData)
+
+  const addCoffee = (id: any) => {
+    const newCofeeInfo = coffeeInfo
+
+    for (let i = 0; i < newCofeeInfo.length; i++) {
+      if (newCofeeInfo[i].id === id) {
+        newCofeeInfo[i].quantity = newCofeeInfo[i].quantity + 1
+      }
+    }
+
+    setCoffeeInfo(newCofeeInfo)
+  }
+
+  const decreaseCoffee = (id: string) => {
+    const newCofeeInfo = coffeeInfo
+
+    for (let i = 0; i < newCofeeInfo.length; i++) {
+      if (newCofeeInfo[i].id === id) {
+        newCofeeInfo[i].quantity = newCofeeInfo[i].quantity - 1
+      }
+    }
+
+    setCoffeeInfo(newCofeeInfo)
+  }
 
   return (
-    <CoffeeContext.Provider value={{ coffeeInfo }}>
+    <CoffeeContext.Provider value={{ coffeeInfo, addCoffee, decreaseCoffee }}>
       {children}
     </CoffeeContext.Provider>
   )
