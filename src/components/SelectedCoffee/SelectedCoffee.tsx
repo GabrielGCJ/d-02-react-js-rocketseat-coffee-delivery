@@ -1,3 +1,4 @@
+import { Binoculars, Trash } from 'phosphor-react'
 import { expressoTradicionalImg } from '../../assents'
 
 import {
@@ -16,9 +17,9 @@ export const SelectedCoffee = () => {
   return (
     <SelectedCoffeeContainer>
       <ImgTitleButonsContainer>
-        {/* <ImgContainer> */}
-        <img src={expressoTradicionalImg} alt="" />
-        {/* </ImgContainer> */}
+        <ImgContainer>
+          <img src={expressoTradicionalImg} alt="" />
+        </ImgContainer>
 
         <TitleAndButtonsContainer>
           <TitleContainer>
@@ -33,7 +34,8 @@ export const SelectedCoffee = () => {
             </QuantityContainer>
 
             <RemoveButtonContainer>
-              <p>remove</p>
+              <Trash />
+              <p>REMOVER</p>
             </RemoveButtonContainer>
           </ButtonsContainer>
         </TitleAndButtonsContainer>
