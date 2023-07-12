@@ -9,7 +9,7 @@ export const SelectedCoffeeContainer = styled.div`
   width: 23rem;
   height: 5rem;
 
-  border-bottom: 1px solid ${(props) => props.theme['gray-500']};
+  border-bottom: 2px solid ${(props) => props.theme['gray-500']};
 
   img {
     width: 4.5rem;
@@ -40,6 +40,8 @@ export const TitleAndButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
+
+  padding-left: 15px;
 `
 
 export const TitleContainer = styled.div`
@@ -102,6 +104,6 @@ export const TrashContainer = styled.div`
 export const PriceContainer = styled.div`
   display: flex;
   font-size: 0.7rem;
-  padding-bottom: 2.8rem;
+  padding-bottom: 2.5rem;
   padding-left: 2.8rem;
 `
