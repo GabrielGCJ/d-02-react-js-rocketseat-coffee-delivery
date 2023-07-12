@@ -1,7 +1,8 @@
-import coffeTradicional from '../../assents/coffee-types/expresso-tradicional.svg'
-// import traditionalTag from '../../assents/coffee-tags/tag1-tradicional.svg'
-// import geladoTag from '../../assents/coffee-tags/tag2-gelado.svg'
 import shopImg from '../../assents/shoppingCartSimplePurple.svg'
+import { coffeeDataType } from '../../data/coffeeData'
+import { useContext } from 'react'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
+
 import {
   tag1tradicional,
   tag2especial,
@@ -22,9 +23,6 @@ import {
   TagsContainer,
   TitleContainer,
 } from './styles'
-import { coffeeDataType } from '../../data/coffeeData'
-import { useContext } from 'react'
-import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 export const Coffee = ({
   id,
@@ -43,12 +41,10 @@ export const Coffee = ({
 
   const handleDecreaseCoffee = () => {
     decreaseCoffee(id)
-    // console.log('handleDecreaseCoffee')
   }
 
   const handleAddCoffee = () => {
     addCoffee(id)
-    // console.log('handleAddCoffee')
   }
 
   return (
