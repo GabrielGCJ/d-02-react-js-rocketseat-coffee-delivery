@@ -1,4 +1,4 @@
-import { Binoculars, Trash } from 'phosphor-react'
+import { Trash } from 'phosphor-react'
 import { expressoTradicionalImg } from '../../assents'
 
 import {

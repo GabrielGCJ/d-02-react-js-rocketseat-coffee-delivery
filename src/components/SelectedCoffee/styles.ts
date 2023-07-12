@@ -102,6 +102,6 @@ export const TrashContainer = styled.div`
 export const PriceContainer = styled.div`
   display: flex;
   font-size: 0.7rem;
-  padding-bottom: 2.8rem;
+  padding-bottom: 2.5rem;
   padding-left: 2.8rem;
 `
