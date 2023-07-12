@@ -11,6 +11,7 @@ import {
   TitleAndButtonsContainer,
   PriceContainer,
   ImgTitleButonsContainer,
+  TrashContainer,
 } from './styles'
 
 export const SelectedCoffee = () => {
@@ -34,7 +35,9 @@ export const SelectedCoffee = () => {
             </QuantityContainer>
 
             <RemoveButtonContainer>
-              <Trash />
+              <TrashContainer>
+                <Trash />
+              </TrashContainer>
               <p>REMOVER</p>
             </RemoveButtonContainer>
           </ButtonsContainer>

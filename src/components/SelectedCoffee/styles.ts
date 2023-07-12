@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 export const SelectedCoffeeContainer = styled.div`
-  background-color: red;
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* justify-content: center; */
   padding: 0.3rem;
 
-  width: 368px;
-  height: 80px;
+  width: 23rem;
+  height: 5rem;
+
+  border-bottom: 1px solid ${(props) => props.theme['gray-500']};
 
   img {
     width: 4.5rem;
@@ -17,13 +17,11 @@ export const SelectedCoffeeContainer = styled.div`
 `
 
 export const ImgTitleButonsContainer = styled.div`
-  background-color: blue;
-
   display: flex;
   justify-content: start;
 
-  width: 255px;
-  height: 64px;
+  width: 15.9375rem;
+  height: 4rem;
 `
 
 export const ImgContainer = styled.div`
@@ -60,8 +58,8 @@ export const QuantityContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 72px;
-  height: 32px;
+  width: 4.5rem;
+  height: 2rem;
   border-radius: 8px;
 
   background-color: ${(props) => props.theme['gray-500']};
@@ -80,30 +78,30 @@ export const QuantityContainer = styled.div`
 
 export const RemoveButtonContainer = styled.div`
   display: flex;
-  width: 91px;
-  height: 32px;
+  width: 5.6875rem;
+  height: 2rem;
   border-radius: 8px;
   background-color: ${(props) => props.theme['gray-500']};
   text-align: center;
   align-items: center;
   justify-content: center;
 
-  font-size: 0.8rem ;
+  font-size: 0.8rem;
 
   svg {
     color: ${(props) => props.theme['purple-600']};
-    /* padding-right: 10px; */
+    padding-left: 0.1rem;
   }
+`
+
+export const TrashContainer = styled.div`
+  display: flex;
+  padding-right: 0.25rem;
 `
 
 export const PriceContainer = styled.div`
   display: flex;
   font-size: 0.7rem;
   padding-bottom: 2.8rem;
-  padding-left: 2rem;
-  justify-content: end;
-  align-items: end;
-  /* position: absolute;
-  top: 20px;
-  left: 20px; */
+  padding-left: 2.8rem;
 `
