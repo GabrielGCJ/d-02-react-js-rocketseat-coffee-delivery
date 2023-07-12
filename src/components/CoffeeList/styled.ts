@@ -4,7 +4,7 @@ export const CoffeeListExternalContainer = styled.div`
   display: flex;
   align-items: center;
 
-  background-color: red;
+  /* background-color: red; */
 
   padding: 1rem 10rem 0rem;
 
@@ -38,7 +38,7 @@ export const CoffeeText = styled.div`
 `
 
 export const AllCoffeesContainer = styled.div`
-  background-color: purple;
+  /* background-color: purple; */
 
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ export const AllCoffeesContainer = styled.div`
 `
 
 export const AllCoffees = styled.div`
-  background-color: blue;
+  /* background-color: blue; */
   justify-content: start;
   display: flex;
   align-items: center;

@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import { CoffeeData } from '../../data/coffeeData'
 import { Coffee } from '../Coffee/Coffee'
 import {
   AllCoffees,

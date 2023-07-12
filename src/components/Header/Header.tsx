@@ -7,7 +7,6 @@ import {
 } from './styles'
 import coffeeDeliveryLogo from '../../assents/coffeeDeliveryLogo.svg'
 import buttonCart from '../../assents/buttonCart.svg'
-// import iconLocation from '../../assents/iconLocation.svg'
 import { MapPin } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
 

@@ -1,3 +1,34 @@
+import { useContext } from 'react'
+import {
+  CheckoutContainer,
+  DeliveryForm,
+  DeliveryFormContainer,
+  SelectedCoffees,
+  SelectedCoffeesContainer,
+  TextDeliveryForm,
+  TextSelectedCoffees,
+} from './styles'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
+import { Coffee } from 'phosphor-react'
+
 export const CheckoutPage = () => {
-  return <h1>Checkout</h1>
+  const { activeCoffeeInfo } = useContext(CoffeeContext)
+
+  return (
+    <CheckoutContainer>
+      <DeliveryFormContainer>
+        <TextDeliveryForm>
+          <h1>DeliveryForm</h1>
+        </TextDeliveryForm>
+        <DeliveryForm></DeliveryForm>
+      </DeliveryFormContainer>
+
+      <SelectedCoffeesContainer>
+        <TextSelectedCoffees>
+          <h1>SelectedCoffees</h1>
+        </TextSelectedCoffees>
+        <SelectedCoffees></SelectedCoffees>
+      </SelectedCoffeesContainer>
+    </CheckoutContainer>
+  )
 }
