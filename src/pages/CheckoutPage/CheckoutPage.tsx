@@ -10,8 +10,6 @@ import {
 } from './styles'
 import { CoffeeContext } from '../../contexts/CoffeeContext'
 
-import { Coffee } from 'phosphor-react'
-
 import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
 
 export const CheckoutPage = () => {
@@ -31,7 +29,18 @@ export const CheckoutPage = () => {
           <h1>SelectedCoffees</h1>
         </TextSelectedCoffees>
         <SelectedCoffees>
-          <SelectedCoffee />
+          {activeCoffeeInfo.map((coffee) => {
+            return (
+              <SelectedCoffee
+                key={coffee.id}
+                id={coffee.id}
+                img={coffee.img}
+                name={coffee.name}
+                price={coffee.price}
+                quantity={coffee.quantity}
+              />
+            )
+          })}
         </SelectedCoffees>
       </SelectedCoffeesContainer>
     </CheckoutContainer>

@@ -1,4 +1,4 @@
-import { Binoculars, Trash } from 'phosphor-react'
+import { Trash } from 'phosphor-react'
 import { expressoTradicionalImg } from '../../assents'
 
 import {
@@ -13,24 +13,39 @@ import {
   ImgTitleButonsContainer,
   TrashContainer,
 } from './styles'
+import { coffeeDataType } from '../../data/coffeeData'
 
-export const SelectedCoffee = () => {
+interface SelectedCoffeeType {
+  id: string
+  img: any
+  name: string
+  price: number
+  quantity: number
+}
+
+export const SelectedCoffee = ({
+  id,
+  img,
+  name,
+  price,
+  quantity,
+}: SelectedCoffeeType) => {
   return (
     <SelectedCoffeeContainer>
       <ImgTitleButonsContainer>
         <ImgContainer>
-          <img src={expressoTradicionalImg} alt="" />
+          <img src={img} alt="" />
         </ImgContainer>
 
         <TitleAndButtonsContainer>
           <TitleContainer>
-            <p>Expresso Tradicional</p>
+            <p>{name}</p>
           </TitleContainer>
 
           <ButtonsContainer>
             <QuantityContainer>
               <button>-</button>
-              <span id="valorContador">2</span>
+              <span id="quantity">{quantity}</span>
               <button>+</button>
             </QuantityContainer>
 
@@ -44,9 +59,7 @@ export const SelectedCoffee = () => {
         </TitleAndButtonsContainer>
       </ImgTitleButonsContainer>
       <PriceContainer>
-        {/* <p>R$ 9,90</p> */}
-        {/* <h2>{price.toFixed(2).replace('.', ',')}</h2> */}
-        <h2>R$ 9,90</h2>
+        <h2>{`R$ ${price.toFixed(2).replace('.', ',')}`}</h2>
       </PriceContainer>
     </SelectedCoffeeContainer>
   )
