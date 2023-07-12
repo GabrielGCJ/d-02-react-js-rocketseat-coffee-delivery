@@ -10,6 +10,7 @@ import {
 } from './styles'
 import { CoffeeContext } from '../../contexts/CoffeeContext'
 import { Coffee } from 'phosphor-react'
+import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
 
 export const CheckoutPage = () => {
   const { activeCoffeeInfo } = useContext(CoffeeContext)
@@ -27,7 +28,9 @@ export const CheckoutPage = () => {
         <TextSelectedCoffees>
           <h1>SelectedCoffees</h1>
         </TextSelectedCoffees>
-        <SelectedCoffees></SelectedCoffees>
+        <SelectedCoffees>
+          <SelectedCoffee />
+        </SelectedCoffees>
       </SelectedCoffeesContainer>
     </CheckoutContainer>
   )
