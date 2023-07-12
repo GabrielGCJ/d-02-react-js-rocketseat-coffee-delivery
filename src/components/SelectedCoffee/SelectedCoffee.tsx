@@ -5,30 +5,44 @@ import {
   QuantityContainer,
   RemoveButtonContainer,
   SelectedCoffeeContainer,
-  TitleAndButtonsContainer,
+  ButtonsContainer,
   TitleContainer,
+  TitleAndButtonsContainer,
+  PriceContainer,
+  ImgTitleButonsContainer,
 } from './styles'
 
 export const SelectedCoffee = () => {
   return (
     <SelectedCoffeeContainer>
-      <ImgContainer>
+      <ImgTitleButonsContainer>
+        {/* <ImgContainer> */}
         <img src={expressoTradicionalImg} alt="" />
-      </ImgContainer>
+        {/* </ImgContainer> */}
 
-      <TitleAndButtonsContainer>
-        <TitleContainer>
-          <p>Expresso Tradicional</p>
-        </TitleContainer>
-        <QuantityContainer>
-          <button>-</button>
-          <span id="valorContador">2</span>
-          <button>+</button>
-        </QuantityContainer>
-        <RemoveButtonContainer>
-          <p>remove</p>
-        </RemoveButtonContainer>
-      </TitleAndButtonsContainer>
+        <TitleAndButtonsContainer>
+          <TitleContainer>
+            <p>Expresso Tradicional</p>
+          </TitleContainer>
+
+          <ButtonsContainer>
+            <QuantityContainer>
+              <button>-</button>
+              <span id="valorContador">2</span>
+              <button>+</button>
+            </QuantityContainer>
+
+            <RemoveButtonContainer>
+              <p>remove</p>
+            </RemoveButtonContainer>
+          </ButtonsContainer>
+        </TitleAndButtonsContainer>
+      </ImgTitleButonsContainer>
+      <PriceContainer>
+        {/* <p>R$ 9,90</p> */}
+        {/* <h2>{price.toFixed(2).replace('.', ',')}</h2> */}
+        <h2>R$ 9,90</h2>
+      </PriceContainer>
     </SelectedCoffeeContainer>
   )
 }

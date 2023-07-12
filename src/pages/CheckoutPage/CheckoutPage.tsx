@@ -9,7 +9,9 @@ import {
   TextSelectedCoffees,
 } from './styles'
 import { CoffeeContext } from '../../contexts/CoffeeContext'
+
 import { Coffee } from 'phosphor-react'
+
 import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
 
 export const CheckoutPage = () => {
