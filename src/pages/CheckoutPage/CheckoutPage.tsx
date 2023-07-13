@@ -3,6 +3,7 @@ import {
   CheckoutContainer,
   CoffeeAndBalance,
   CoffeeBalanceContainer,
+  ConfirmationButton,
   DeliveryForm,
   DeliveryFormContainer,
   DeliveryValue,
@@ -60,6 +61,9 @@ export const CheckoutPage = () => {
                 <h2>Total</h2>
                 <h2>R$ 21,50</h2>
               </TotalValue>
+              <ConfirmationButton>
+                <h3>CONFIRMAR PEDIDO</h3>
+              </ConfirmationButton>
             </CoffeeBalanceContainer>
           </CoffeeAndBalance>
         </SelectedCoffees>

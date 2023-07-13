@@ -97,3 +97,19 @@ export const TotalValue = styled.div`
   display: flex;
   justify-content: space-between;
 `
+
+export const ConfirmationButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 368px;
+  height: 46px;
+
+  border-radius: 8px;
+
+  font-size: 0.8rem;
+
+  background-color: ${(props) => props.theme['yellow-600']};
+  color: ${(props) => props.theme['gray-100']};
+`
