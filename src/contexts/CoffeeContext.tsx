@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { ReactNode, createContext, useState } from 'react'
+import { ReactNode, createContext, useState, useEffect } from 'react'
 import { CoffeeData, coffeeDataType } from '../data/coffeeData'
 
 interface CreateContextType {
@@ -62,7 +62,7 @@ export const CoffeeContextProvider = ({
     console.log(allActiveCoffee())
   }
 
-  // useEffect(() => {}, [addCoffee, decreaseCoffee, setCoffeeInfo])
+  useEffect(() => {}, [addCoffee, decreaseCoffee, setCoffeeInfo])
 
   const allActiveCoffee = () => {
     const activeCoffee: coffeeDataType[] = []
