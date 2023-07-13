@@ -30,6 +30,8 @@ export interface coffeeDataType {
   quantity: number
 }
 
+export const DeliveryValuePay = 3.5
+
 export const CoffeeData = [
   {
     id: '001',
