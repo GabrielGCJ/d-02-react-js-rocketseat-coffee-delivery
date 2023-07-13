@@ -1,12 +1,19 @@
 import styled from 'styled-components'
 
+export const SelectedCoffeeExternalContainer = styled.div`
+  display: flex;
+
+  padding-bottom: 30px;
+`
+
 export const SelectedCoffeeContainer = styled.div`
-  background: red;
+  /* background: red; */
 
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0.3rem;
+  padding-bottom: 2rem;
 
   width: 23rem;
   height: 5rem;

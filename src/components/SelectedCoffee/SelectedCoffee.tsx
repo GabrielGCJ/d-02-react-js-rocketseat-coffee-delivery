@@ -11,6 +11,7 @@ import {
   PriceContainer,
   ImgTitleButonsContainer,
   TrashContainer,
+  SelectedCoffeeExternalContainer,
 } from './styles'
 
 interface SelectedCoffeeType {
@@ -29,36 +30,38 @@ export const SelectedCoffee = ({
   quantity,
 }: SelectedCoffeeType) => {
   return (
-    <SelectedCoffeeContainer>
-      <ImgTitleButonsContainer>
-        <ImgContainer>
-          <img src={img} alt="" />
-        </ImgContainer>
+    <SelectedCoffeeExternalContainer>
+      <SelectedCoffeeContainer>
+        <ImgTitleButonsContainer>
+          <ImgContainer>
+            <img src={img} alt="" />
+          </ImgContainer>
 
-        <TitleAndButtonsContainer>
-          <TitleContainer>
-            <p>{name}</p>
-          </TitleContainer>
+          <TitleAndButtonsContainer>
+            <TitleContainer>
+              <p>{name}</p>
+            </TitleContainer>
 
-          <ButtonsContainer>
-            <QuantityContainer>
-              <button>-</button>
-              <span id="quantity">{quantity}</span>
-              <button>+</button>
-            </QuantityContainer>
+            <ButtonsContainer>
+              <QuantityContainer>
+                <button>-</button>
+                <span id="quantity">{quantity}</span>
+                <button>+</button>
+              </QuantityContainer>
 
-            <RemoveButtonContainer>
-              <TrashContainer>
-                <Trash />
-              </TrashContainer>
-              <p>REMOVER</p>
-            </RemoveButtonContainer>
-          </ButtonsContainer>
-        </TitleAndButtonsContainer>
-      </ImgTitleButonsContainer>
-      <PriceContainer>
-        <h2>{`R$ ${price.toFixed(2).replace('.', ',')}`}</h2>
-      </PriceContainer>
-    </SelectedCoffeeContainer>
+              <RemoveButtonContainer>
+                <TrashContainer>
+                  <Trash />
+                </TrashContainer>
+                <p>REMOVER</p>
+              </RemoveButtonContainer>
+            </ButtonsContainer>
+          </TitleAndButtonsContainer>
+        </ImgTitleButonsContainer>
+        <PriceContainer>
+          <h2>{`R$ ${price.toFixed(2).replace('.', ',')}`}</h2>
+        </PriceContainer>
+      </SelectedCoffeeContainer>
+    </SelectedCoffeeExternalContainer>
   )
 }
