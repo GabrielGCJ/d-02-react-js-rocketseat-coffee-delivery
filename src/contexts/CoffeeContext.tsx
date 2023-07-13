@@ -9,6 +9,7 @@ interface CreateContextType {
   deleteCoffee: (id: string) => void
   allActiveCoffee: () => coffeeDataType[]
   activeCoffeeInfo: coffeeDataType[]
+  totalPay: number
 }
 
 export const CoffeeContext = createContext({} as CreateContextType)
@@ -22,6 +23,7 @@ export const CoffeeContextProvider = ({
 }: CoffeeContextProviderProps) => {
   const [coffeeInfo, setCoffeeInfo] = useState<coffeeDataType[]>(CoffeeData)
   const [activeCoffeeInfo, setActiveCoffeeInfo] = useState<coffeeDataType[]>([])
+  const [totalPay, setTotalPay] = useState(0)
 
   const addCoffee = (id: string) => {
     const newCoffeeInfo = [...coffeeInfo]
@@ -73,7 +75,20 @@ export const CoffeeContextProvider = ({
       }
     }
     setActiveCoffeeInfo(activeCoffee)
+    checkTotalPayment()
     return activeCoffee
+  }
+
+  const checkTotalPayment = () => {
+    let totalPayment = 0
+
+    for (let i = 0; i < coffeeInfo.length; i++) {
+      if (coffeeInfo[i].quantity > 0) {
+        totalPayment += coffeeInfo[i].price * coffeeInfo[i].quantity
+      }
+    }
+    console.log(`Total a pagar ${totalPayment}`)
+    setTotalPay(totalPayment)
   }
 
   return (
@@ -85,6 +100,7 @@ export const CoffeeContextProvider = ({
         allActiveCoffee,
         activeCoffeeInfo,
         deleteCoffee,
+        totalPay,
       }}
     >
       {children}
