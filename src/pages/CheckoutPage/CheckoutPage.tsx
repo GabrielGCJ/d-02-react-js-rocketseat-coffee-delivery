@@ -19,7 +19,7 @@ import { CoffeeContext } from '../../contexts/CoffeeContext'
 import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
 
 export const CheckoutPage = () => {
-  const { activeCoffeeInfo } = useContext(CoffeeContext)
+  const { activeCoffeeInfo, totalPay } = useContext(CoffeeContext)
 
   return (
     <CheckoutContainer>
@@ -51,7 +51,7 @@ export const CheckoutPage = () => {
             <CoffeeBalanceContainer>
               <TotalItems>
                 <p>Total de itens</p>
-                <p>R$ 29,80</p>
+                <p>{`R$ ${totalPay.toFixed(2).replace('.', ',')}`}</p>
               </TotalItems>
               <DeliveryValue>
                 <p>Entrega</p>
