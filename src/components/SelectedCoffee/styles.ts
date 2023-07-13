@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const SelectedCoffeeContainer = styled.div`
+  background: red;
+
   display: flex;
   flex-direction: row;
   align-items: center;
