@@ -1,5 +1,4 @@
 import { Trash } from 'phosphor-react'
-import { expressoTradicionalImg } from '../../assents'
 
 import {
   ImgContainer,
@@ -13,7 +12,6 @@ import {
   ImgTitleButonsContainer,
   TrashContainer,
 } from './styles'
-import { coffeeDataType } from '../../data/coffeeData'
 
 interface SelectedCoffeeType {
   id: string

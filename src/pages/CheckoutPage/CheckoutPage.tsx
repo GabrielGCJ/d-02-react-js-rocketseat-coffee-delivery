@@ -1,12 +1,17 @@
 import { useContext } from 'react'
 import {
   CheckoutContainer,
+  CoffeeAndBalance,
+  CoffeeBalanceContainer,
   DeliveryForm,
   DeliveryFormContainer,
+  DeliveryValue,
   SelectedCoffees,
   SelectedCoffeesContainer,
   TextDeliveryForm,
   TextSelectedCoffees,
+  TotalItems,
+  TotalValue,
 } from './styles'
 import { CoffeeContext } from '../../contexts/CoffeeContext'
 
@@ -19,28 +24,44 @@ export const CheckoutPage = () => {
     <CheckoutContainer>
       <DeliveryFormContainer>
         <TextDeliveryForm>
-          <h1>DeliveryForm</h1>
+          <h3>DeliveryForm</h3>
         </TextDeliveryForm>
         <DeliveryForm></DeliveryForm>
       </DeliveryFormContainer>
 
       <SelectedCoffeesContainer>
         <TextSelectedCoffees>
-          <h1>SelectedCoffees</h1>
+          <h3>Cafés Selecionados</h3>
         </TextSelectedCoffees>
         <SelectedCoffees>
-          {activeCoffeeInfo.map((coffee) => {
-            return (
-              <SelectedCoffee
-                key={coffee.id}
-                id={coffee.id}
-                img={coffee.img}
-                name={coffee.name}
-                price={coffee.price}
-                quantity={coffee.quantity}
-              />
-            )
-          })}
+          <CoffeeAndBalance>
+            {activeCoffeeInfo.map((coffee) => {
+              return (
+                <SelectedCoffee
+                  key={coffee.id}
+                  id={coffee.id}
+                  img={coffee.img}
+                  name={coffee.name}
+                  price={coffee.price}
+                  quantity={coffee.quantity}
+                />
+              )
+            })}
+            <CoffeeBalanceContainer>
+              <TotalItems>
+                <p>Total de itens</p>
+                <p>R$ 29,80</p>
+              </TotalItems>
+              <DeliveryValue>
+                <p>Entrega</p>
+                <p>R$ 3,50</p>
+              </DeliveryValue>
+              <TotalValue>
+                <h2>Total</h2>
+                <h2>R$ 21,50</h2>
+              </TotalValue>
+            </CoffeeBalanceContainer>
+          </CoffeeAndBalance>
         </SelectedCoffees>
       </SelectedCoffeesContainer>
     </CheckoutContainer>
