@@ -13,6 +13,8 @@ import {
   TrashContainer,
   SelectedCoffeeExternalContainer,
 } from './styles'
+import { useContext } from 'react'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 interface SelectedCoffeeType {
   id: string
@@ -29,6 +31,12 @@ export const SelectedCoffee = ({
   price,
   quantity,
 }: SelectedCoffeeType) => {
+  const { deleteCoffee } = useContext(CoffeeContext)
+
+  const handleDeleteCoffee = () => {
+    deleteCoffee(id)
+  }
+
   return (
     <SelectedCoffeeExternalContainer>
       <SelectedCoffeeContainer>
@@ -49,7 +57,7 @@ export const SelectedCoffee = ({
                 <button>+</button>
               </QuantityContainer>
 
-              <RemoveButtonContainer>
+              <RemoveButtonContainer onClick={handleDeleteCoffee}>
                 <TrashContainer>
                   <Trash />
                 </TrashContainer>
