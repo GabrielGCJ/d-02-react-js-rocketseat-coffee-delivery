@@ -6,6 +6,7 @@ interface CreateContextType {
   coffeeInfo: coffeeDataType[]
   addCoffee: (id: string) => void
   decreaseCoffee: (id: string) => void
+  deleteCoffee: (id: string) => void
   allActiveCoffee: () => coffeeDataType[]
   activeCoffeeInfo: coffeeDataType[]
 }
@@ -48,6 +49,19 @@ export const CoffeeContextProvider = ({
     console.log(allActiveCoffee())
   }
 
+  const deleteCoffee = (id: string) => {
+    const newCoffeeInfo = [...coffeeInfo]
+
+    for (let i = 0; i < newCoffeeInfo.length; i++) {
+      if (newCoffeeInfo[i].id === id) {
+        newCoffeeInfo[i].quantity = 0
+      }
+    }
+
+    setCoffeeInfo(newCoffeeInfo)
+    console.log(allActiveCoffee())
+  }
+
   // useEffect(() => {}, [addCoffee, decreaseCoffee, setCoffeeInfo])
 
   const allActiveCoffee = () => {
@@ -70,6 +84,7 @@ export const CoffeeContextProvider = ({
         decreaseCoffee,
         allActiveCoffee,
         activeCoffeeInfo,
+        deleteCoffee,
       }}
     >
       {children}
