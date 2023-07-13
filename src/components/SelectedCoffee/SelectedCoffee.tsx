@@ -31,7 +31,15 @@ export const SelectedCoffee = ({
   price,
   quantity,
 }: SelectedCoffeeType) => {
-  const { deleteCoffee } = useContext(CoffeeContext)
+  const { deleteCoffee, addCoffee, decreaseCoffee } = useContext(CoffeeContext)
+
+  const handleAddCoffee = () => {
+    addCoffee(id)
+  }
+
+  const handleDecreaseCoffee = () => {
+    decreaseCoffee(id)
+  }
 
   const handleDeleteCoffee = () => {
     deleteCoffee(id)
@@ -52,9 +60,9 @@ export const SelectedCoffee = ({
 
             <ButtonsContainer>
               <QuantityContainer>
-                <button>-</button>
+                <button onClick={handleDecreaseCoffee}>-</button>
                 <span id="quantity">{quantity}</span>
-                <button>+</button>
+                <button onClick={handleAddCoffee}>+</button>
               </QuantityContainer>
 
               <RemoveButtonContainer onClick={handleDeleteCoffee}>
