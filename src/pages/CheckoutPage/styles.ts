@@ -49,6 +49,8 @@ export const DeliveryForm = styled.div`
   width: 40rem;
 
   background-color: ${(props) => props.theme['gray-300']};
+
+  border-radius: 5px;
 `
 export const InstructionsContainer = styled.div`
   display: flex;
@@ -79,21 +81,75 @@ export const Text2 = styled.div`
 export const InputsContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 20px;
+
+  padding-top: 30px;
+`
+const BaseInput = styled.input`
+  background: ${(props) => props.theme['gray-400']};
+  padding: 0 0.5rem;
+
+  border: 1px solid ${(props) => props.theme['gray-500']};
+  /* border: ; */
+  height: 42px;
+
+  border-radius: 3px;
 `
 
-export const CepInput = styled.input``
+export const CepInput = styled(BaseInput)`
+  display: inline;
+  width: 200px;
+`
 
-export const RoadInput = styled.input``
+export const RoadInput = styled(BaseInput)`
+  display: block;
+`
 
-export const NumberInput = styled.input``
+export const NumberAndComplementContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+`
 
-export const ComplementInput = styled.input``
+export const NumberInput = styled(BaseInput)`
+  width: 200px;
+`
 
-export const DistrictInput = styled.input``
+export const ComplementInput = styled(BaseInput)`
+  width: 100%;
+`
 
-export const CityInput = styled.input``
+export const DistrictCityUfContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+`
 
-export const UFInput = styled.input``
+export const DistrictInput = styled(BaseInput)`
+  width: 200px;
+`
+
+export const CityInput = styled(BaseInput)`
+  width: 100%;
+`
+
+export const UFInput = styled(BaseInput)`
+  max-width: 60px;
+`
+
+export const FormOfPaymentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 30px;
+  padding: 40px;
+
+  width: 40rem;
+
+  background-color: ${(props) => props.theme['gray-300']};
+
+  border-radius: 5px;
+`
 
 // ---
 

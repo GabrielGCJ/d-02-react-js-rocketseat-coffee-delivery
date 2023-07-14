@@ -1,4 +1,6 @@
 import { useContext } from 'react'
+import cifrao from '../../assents/dollar-sign.svg'
+
 import {
   CepInput,
   CheckoutContainer,
@@ -10,10 +12,13 @@ import {
   DeliveryForm,
   DeliveryFormContainer,
   DeliveryValue,
+  DistrictCityUfContainer,
   DistrictInput,
+  FormOfPaymentContainer,
   IconContainer,
   InputsContainer,
   InstructionsContainer,
+  NumberAndComplementContainer,
   NumberInput,
   RoadInput,
   SelectedCoffees,
@@ -62,13 +67,36 @@ export const CheckoutPage = () => {
           <InputsContainer>
             <CepInput placeholder="CEP" />
             <RoadInput placeholder="Rua" />
-            <NumberInput placeholder="Numero" />
-            <ComplementInput placeholder="Complemento" />
-            <DistrictInput placeholder="Bairro" />
-            <CityInput placeholder="Cidade" />
-            <UFInput placeholder="UF" />
+            <NumberAndComplementContainer>
+              <NumberInput placeholder="Numero" />
+              <ComplementInput placeholder="Complemento" />
+            </NumberAndComplementContainer>
+            <DistrictCityUfContainer>
+              <DistrictInput placeholder="Bairro" />
+              <CityInput placeholder="Cidade" />
+              <UFInput placeholder="UF" />
+            </DistrictCityUfContainer>
           </InputsContainer>
         </DeliveryForm>
+        <FormOfPaymentContainer>
+          <InstructionsContainer>
+            <IconContainer>
+              {/* <MapPinLine /> */}
+              <img src={cifrao} alt="" />
+            </IconContainer>
+            <TextInformations>
+              <Text1>
+                <p>Pagamento</p>
+              </Text1>
+              <Text2>
+                <p>
+                  O pagamento é feito na entrega. Escolha a forma que deseja
+                  pagar
+                </p>
+              </Text2>
+            </TextInformations>
+          </InstructionsContainer>
+        </FormOfPaymentContainer>
       </DeliveryFormContainer>
 
       <SelectedCoffeesContainer>
