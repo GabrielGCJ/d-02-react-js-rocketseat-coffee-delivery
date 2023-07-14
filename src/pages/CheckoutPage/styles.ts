@@ -31,15 +31,69 @@ export const CheckoutContainer = styled.div`
 
 export const DeliveryFormContainer = styled.div`
   display: flex;
+  flex-direction: column;
 `
 
 export const TextDeliveryForm = styled.div`
   font-family: 'Baloo 2';
+
+  padding-bottom: 2rem;
 `
 
 export const DeliveryForm = styled.div`
   display: flex;
+  flex-direction: column;
+
+  padding: 40px;
+
+  width: 40rem;
+
+  background-color: ${(props) => props.theme['gray-300']};
 `
+export const InstructionsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+export const IconContainer = styled.div`
+  svg {
+    color: ${(props) => props.theme['yellow-600']};
+    height: 25px;
+    width: 25px;
+  }
+`
+export const TextInformations = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  gap: 0.5rem;
+`
+
+export const Text1 = styled.div`
+  font-size: 17px;
+  font-weight: 500;
+`
+export const Text2 = styled.div`
+  font-size: 15px;
+`
+
+export const InputsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const CepInput = styled.input``
+
+export const RoadInput = styled.input``
+
+export const NumberInput = styled.input``
+
+export const ComplementInput = styled.input``
+
+export const DistrictInput = styled.input``
+
+export const CityInput = styled.input``
+
+export const UFInput = styled.input``
 
 // ---
 

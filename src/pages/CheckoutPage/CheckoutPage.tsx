@@ -1,34 +1,74 @@
 import { useContext } from 'react'
 import {
+  CepInput,
   CheckoutContainer,
+  CityInput,
   CoffeeAndBalance,
   CoffeeBalanceContainer,
+  ComplementInput,
   ConfirmationButton,
   DeliveryForm,
   DeliveryFormContainer,
   DeliveryValue,
+  DistrictInput,
+  IconContainer,
+  InputsContainer,
+  InstructionsContainer,
+  NumberInput,
+  RoadInput,
   SelectedCoffees,
   SelectedCoffeesContainer,
+  Text1,
+  Text2,
   TextDeliveryForm,
+  TextInformations,
   TextSelectedCoffees,
   TotalItems,
   TotalValue,
+  UFInput,
 } from './styles'
 import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
 import { DeliveryValuePay } from '../../data/coffeeData'
+import { MapPinLine } from 'phosphor-react'
+// import { useFormContext } from 'react-hook-form'
 
 export const CheckoutPage = () => {
   const { activeCoffeeInfo, totalPay } = useContext(CoffeeContext)
 
+  // const { register } = useFormContext()
   return (
     <CheckoutContainer>
       <DeliveryFormContainer>
         <TextDeliveryForm>
-          <h3>DeliveryForm</h3>
+          <h3>Complete seu pedido</h3>
         </TextDeliveryForm>
-        <DeliveryForm></DeliveryForm>
+        <DeliveryForm>
+          <InstructionsContainer>
+            <IconContainer>
+              <MapPinLine />
+            </IconContainer>
+            <TextInformations>
+              <Text1>
+                <p>Endereço de entrega</p>
+              </Text1>
+              <Text2>
+                <p>Informe o endereço onde deseja receber seu pedido</p>
+              </Text2>
+            </TextInformations>
+          </InstructionsContainer>
+
+          <InputsContainer>
+            <CepInput placeholder="CEP" />
+            <RoadInput placeholder="Rua" />
+            <NumberInput placeholder="Numero" />
+            <ComplementInput placeholder="Complemento" />
+            <DistrictInput placeholder="Bairro" />
+            <CityInput placeholder="Cidade" />
+            <UFInput placeholder="UF" />
+          </InputsContainer>
+        </DeliveryForm>
       </DeliveryFormContainer>
 
       <SelectedCoffeesContainer>
