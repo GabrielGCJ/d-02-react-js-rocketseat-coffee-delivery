@@ -37,7 +37,7 @@ export const DeliveryFormContainer = styled.div`
 export const TextDeliveryForm = styled.div`
   font-family: 'Baloo 2';
 
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 `
 
 export const DeliveryForm = styled.div`
@@ -90,7 +90,7 @@ const BaseInput = styled.input`
   padding: 0 0.5rem;
 
   border: 1px solid ${(props) => props.theme['gray-500']};
-  /* border: ; */
+
   height: 42px;
 
   border-radius: 3px;
@@ -141,7 +141,7 @@ export const FormOfPaymentContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin-top: 30px;
+  margin-top: 15px;
   padding: 40px;
 
   width: 40rem;
@@ -150,6 +150,26 @@ export const FormOfPaymentContainer = styled.div`
 
   border-radius: 5px;
 `
+export const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  padding-top: 25px;
+`
+
+const BaseButton = styled.button`
+  background-color: ${(props) => props.theme['gray-500']};
+  border: transparent;
+  height: 51px;
+  width: 100%;
+`
+
+export const CreditCardButton = styled(BaseButton)``
+
+export const DebitCardButton = styled(BaseButton)``
+
+export const MoneyButton = styled(BaseButton)``
 
 // ---
 
@@ -182,7 +202,7 @@ export const CoffeeAndBalance = styled.div`
 export const TextSelectedCoffees = styled.div`
   font-family: 'Baloo 2';
 
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 `
 
 export const CoffeeBalanceContainer = styled.div`
