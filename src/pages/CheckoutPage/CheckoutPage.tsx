@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import cifrao from '../../assents/dollar-sign.svg'
 
 import {
+  ButtonsContainer,
   CepInput,
   CheckoutContainer,
   CityInput,
@@ -9,6 +10,8 @@ import {
   CoffeeBalanceContainer,
   ComplementInput,
   ConfirmationButton,
+  CreditCardButton,
+  DebitCardButton,
   DeliveryForm,
   DeliveryFormContainer,
   DeliveryValue,
@@ -18,6 +21,7 @@ import {
   IconContainer,
   InputsContainer,
   InstructionsContainer,
+  MoneyButton,
   NumberAndComplementContainer,
   NumberInput,
   RoadInput,
@@ -96,6 +100,11 @@ export const CheckoutPage = () => {
               </Text2>
             </TextInformations>
           </InstructionsContainer>
+          <ButtonsContainer>
+            <CreditCardButton>Cartão de Credito</CreditCardButton>
+            <DebitCardButton>Cartão de Debito</DebitCardButton>
+            <MoneyButton>Dinheiro</MoneyButton>
+          </ButtonsContainer>
         </FormOfPaymentContainer>
       </DeliveryFormContainer>
 
