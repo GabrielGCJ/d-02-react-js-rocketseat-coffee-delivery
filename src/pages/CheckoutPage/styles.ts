@@ -29,29 +29,33 @@ export const CheckoutContainer = styled.div`
   }
 `
 
-export const DeliveryFormContainer = styled.div`
+const PrimaryContainers = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-export const TextDeliveryForm = styled.div`
-  font-family: 'Baloo 2';
-
-  padding-bottom: 1rem;
-`
+export const DeliveryFormContainer = styled(PrimaryContainers)``
 
 export const DeliveryForm = styled.div`
   display: flex;
+  background: ${(props) => props.theme['gray-300']};
+
   flex-direction: column;
 
   padding: 40px;
 
   width: 40rem;
 
-  background-color: ${(props) => props.theme['gray-300']};
-
   border-radius: 5px;
 `
+
+const TopText = styled.div`
+  font-family: 'Baloo 2';
+  padding-bottom: 1rem;
+`
+
+export const TextDeliveryForm = styled(TopText)``
+
 export const InstructionsContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -159,10 +163,33 @@ export const ButtonsContainer = styled.div`
 `
 
 const BaseButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.7rem;
+
   background-color: ${(props) => props.theme['gray-500']};
+  color: ${(props) => props.theme['gray-800']};
   border: transparent;
-  height: 51px;
+  border-radius: 5px;
+
   width: 100%;
+  height: 51px;
+
+  gap: 0.5rem;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: ${(props) => props.theme['purple-600']};
+  }
+
+  :hover {
+    color: ${(props) => props.theme['purple-600']};
+    background: ${(props) => props.theme['yellow-600']};
+    transition: color 0.3s, background-color 0.5s;
+  }
 `
 
 export const CreditCardButton = styled(BaseButton)``
@@ -173,21 +200,19 @@ export const MoneyButton = styled(BaseButton)``
 
 // ---
 
-export const SelectedCoffeesContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`
+export const SelectedCoffeesContainer = styled(PrimaryContainers)``
 
 export const SelectedCoffees = styled.div`
   display: flex;
-
-  width: 28rem;
-
   background: ${(props) => props.theme['gray-300']};
 
-  padding: 40px;
+  border-radius: 6px 44px;
 
-  border-radius: 0 40px 0 40px;
+  width: 448px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
 `
 
 export const CoffeeAndBalance = styled.div`
@@ -195,38 +220,26 @@ export const CoffeeAndBalance = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  width: 28rem;
 `
 
-export const TextSelectedCoffees = styled.div`
-  font-family: 'Baloo 2';
-
-  padding-bottom: 1rem;
-`
+export const TextSelectedCoffees = styled(TopText)``
 
 export const CoffeeBalanceContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
-  width: 23rem;
 `
 
-export const TotalItems = styled.div`
+const BalanceProps = styled.div`
   display: flex;
   justify-content: space-between;
 `
 
-export const DeliveryValue = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
+export const TotalItems = styled(BalanceProps)``
 
-export const TotalValue = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
+export const DeliveryValue = styled(BalanceProps)``
+
+export const TotalValue = styled(BalanceProps)``
 
 export const ConfirmationButton = styled.div`
   display: flex;
@@ -242,4 +255,10 @@ export const ConfirmationButton = styled.div`
 
   background-color: ${(props) => props.theme['yellow-600']};
   color: ${(props) => props.theme['gray-100']};
+
+  :hover {
+    color: ${(props) => props.theme['yellow-300']};
+    background: ${(props) => props.theme['yellow-900']};
+    transition: color 0.3s, background-color 0.5s;
+  }
 `

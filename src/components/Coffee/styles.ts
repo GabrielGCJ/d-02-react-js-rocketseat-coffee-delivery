@@ -69,8 +69,7 @@ export const QuantityContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  /* padding: 20px; */
-
+  cursor: default;
   width: 4.5rem;
   height: 2.375rem;
   border-radius: 8px;
@@ -79,6 +78,7 @@ export const QuantityContainer = styled.div`
 
   span {
     padding: 0 0.5rem;
+    user-select: none;
   }
 
   button {

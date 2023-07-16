@@ -40,7 +40,7 @@ import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
 import { DeliveryValuePay } from '../../data/coffeeData'
-import { MapPinLine } from 'phosphor-react'
+import { Bank, CreditCard, MapPinLine, Money } from 'phosphor-react'
 // import { useFormContext } from 'react-hook-form'
 
 export const CheckoutPage = () => {
@@ -101,9 +101,18 @@ export const CheckoutPage = () => {
             </TextInformations>
           </InstructionsContainer>
           <ButtonsContainer>
-            <CreditCardButton>Cartão de Credito</CreditCardButton>
-            <DebitCardButton>Cartão de Debito</DebitCardButton>
-            <MoneyButton>Dinheiro</MoneyButton>
+            <CreditCardButton>
+              <CreditCard />
+              CARTÃO DE CREDITO
+            </CreditCardButton>
+            <DebitCardButton>
+              <Bank />
+              CARTÃO DE DEBITO
+            </DebitCardButton>
+            <MoneyButton>
+              <Money />
+              DINHEIRO
+            </MoneyButton>
           </ButtonsContainer>
         </FormOfPaymentContainer>
       </DeliveryFormContainer>
