@@ -241,10 +241,12 @@ export const DeliveryValue = styled(BalanceProps)``
 
 export const TotalValue = styled(BalanceProps)``
 
-export const ConfirmationButton = styled.div`
+export const ConfirmationButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border: transparent;
 
   width: 368px;
   height: 46px;
