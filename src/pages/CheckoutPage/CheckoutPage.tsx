@@ -41,6 +41,7 @@ import { CoffeeContext } from '../../contexts/CoffeeContext'
 import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
 import { DeliveryValuePay } from '../../data/coffeeData'
 import { Bank, CreditCard, MapPinLine, Money } from 'phosphor-react'
+import { NavLink } from 'react-router-dom'
 // import { useFormContext } from 'react-hook-form'
 
 export const CheckoutPage = () => {
@@ -154,9 +155,11 @@ export const CheckoutPage = () => {
                   <h2>R$ 0,00</h2>
                 )}
               </TotalValue>
-              <ConfirmationButton>
-                <h3>CONFIRMAR PEDIDO</h3>
-              </ConfirmationButton>
+              <NavLink to="/success">
+                <ConfirmationButton>
+                  <h3>CONFIRMAR PEDIDO</h3>
+                </ConfirmationButton>
+              </NavLink>
             </CoffeeBalanceContainer>
           </CoffeeAndBalance>
         </SelectedCoffees>
