@@ -180,7 +180,7 @@ export const CheckoutPage = () => {
                 CARTÃO DE DEBITO
               </DebitCardButton>
               <MoneyButton>
-                <Money onClick={consoleNow}/>
+                <Money onClick={consoleNow} />
                 DINHEIRO
               </MoneyButton>
             </ButtonsContainer>
