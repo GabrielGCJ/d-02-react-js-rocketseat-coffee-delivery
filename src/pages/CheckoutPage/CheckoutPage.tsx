@@ -45,51 +45,21 @@ import { DeliveryValuePay } from '../../data/coffeeData'
 import { Bank, CreditCard, MapPinLine, Money } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
 
-interface address {
-  cep: string
-  road: string
-  numberHouse: string
-  complement: string
-  district: string
-  city: string
-  uf: string
-}
-
 export const CheckoutPage = () => {
-  const { activeCoffeeInfo, totalPay } = useContext(CoffeeContext)
-
-  // const [cep, setCep] = useState('')
-  // const [road, setRoad] = useState('')
-  // const [numberHouse, setNumberHouse] = useState('')
-  // const [complement, setComplement] = useState('')
-  // const [district, setDistrict] = useState('')
-  // const [city, setCity] = useState('')
-  // const [uf, setUf] = useState('')
-
-  const [buy, setBuy] = useState<address>([])
+  const { activeCoffeeInfo, totalPay, setAddressUser, addressUser } =
+    useContext(CoffeeContext)
 
   const { register, handleSubmit } = useForm()
 
-  // console.log(cep)
-
   const handleCreateNewBuy = async (data: any) => {
-    setBuy(data)
+    setAddressUser(data)
   }
-  console.log(buy)
+  console.log(addressUser)
 
-  // const consoleInfo = () => {
-  //   console.log('Este é o resultado!', {
-  //     cep,
-  //     road,
-  //     numberHouse,
-  //     complement,
-  //     district,
-  //     city,
-  //     uf,
-  //   })
-  // }
+  const consoleNow = () => {
+    console.log(addressUser)
+  }
 
-  // const { register } = useFormContext()
   return (
     <CheckoutContainer>
       <form onSubmit={handleSubmit(handleCreateNewBuy)}>
@@ -210,7 +180,7 @@ export const CheckoutPage = () => {
                 CARTÃO DE DEBITO
               </DebitCardButton>
               <MoneyButton>
-                <Money />
+                <Money onClick={consoleNow}/>
                 DINHEIRO
               </MoneyButton>
             </ButtonsContainer>
