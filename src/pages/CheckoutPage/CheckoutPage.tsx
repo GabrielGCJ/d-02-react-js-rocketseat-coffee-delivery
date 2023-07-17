@@ -44,50 +44,55 @@ import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
 import { DeliveryValuePay } from '../../data/coffeeData'
 import { Bank, CreditCard, MapPinLine, Money } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
-// import { useFormContext } from 'react-hook-form'
+
+interface address {
+  cep: string
+  road: string
+  numberHouse: string
+  complement: string
+  district: string
+  city: string
+  uf: string
+}
 
 export const CheckoutPage = () => {
   const { activeCoffeeInfo, totalPay } = useContext(CoffeeContext)
 
-  const [cep, setCep] = useState('')
-  const [road, setRoad] = useState('')
-  const [numberHouse, setNumberHouse] = useState('')
-  const [complement, setComplement] = useState('')
-  const [district, setDistrict] = useState('')
-  const [city, setCity] = useState('')
-  const [uf, setUf] = useState('')
+  // const [cep, setCep] = useState('')
+  // const [road, setRoad] = useState('')
+  // const [numberHouse, setNumberHouse] = useState('')
+  // const [complement, setComplement] = useState('')
+  // const [district, setDistrict] = useState('')
+  // const [city, setCity] = useState('')
+  // const [uf, setUf] = useState('')
+
+  const [buy, setBuy] = useState<address>([])
+
+  const { register, handleSubmit } = useForm()
 
   // console.log(cep)
 
-  const handleSubmit = (event: any) => {
-    event.preventDefault()
-    setCep(event.target.cep.value)
-    setRoad(event.target.road.value)
-    setNumberHouse(event.target.cep.value)
-    setComplement(event.target.number.value)
-    setDistrict(event.target.district.value)
-    setCity(event.target.city.value)
-    setUf(event.target.uf.value)
-
-    consoleInfo()
+  const handleCreateNewBuy = async (data: any) => {
+    setBuy(data)
   }
+  console.log(buy)
 
-  const consoleInfo = () => {
-    console.log('Este é o resultado!', {
-      cep,
-      road,
-      numberHouse,
-      complement,
-      district,
-      city,
-      uf,
-    })
-  }
+  // const consoleInfo = () => {
+  //   console.log('Este é o resultado!', {
+  //     cep,
+  //     road,
+  //     numberHouse,
+  //     complement,
+  //     district,
+  //     city,
+  //     uf,
+  //   })
+  // }
 
   // const { register } = useFormContext()
   return (
     <CheckoutContainer>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(handleCreateNewBuy)}>
         <DeliveryFormContainer>
           <TextDeliveryForm>
             <h3>Complete seu pedido</h3>
@@ -110,62 +115,69 @@ export const CheckoutPage = () => {
             <InputsContainer>
               <CepInput
                 id="cep"
-                name="cep"
+                // name="cep"
                 placeholder="CEP"
                 list="address"
                 // onChange={(e) => setCep(e.target.value)}
                 // value={cep}
+                {...register('cep')}
               />
               <RoadInput
                 id="road"
-                name="road"
+                // name="road"
                 placeholder="Rua"
                 list="address"
                 // onChange={(e) => setRoad(e.target.value)}
                 // value={road}
+                {...register('road')}
               />
               <NumberAndComplementContainer>
                 <NumberInput
                   id="number"
-                  name="number"
+                  // name="numberHouse"
                   placeholder="Numero"
                   list="address"
                   // onChange={(e) => setNumberHouse(e.target.value)}
                   // value={numberHouse}
+                  {...register('numberHouse')}
                 />
                 <ComplementInput
                   id="complement"
-                  name="complement"
+                  // name="complement"
                   placeholder="Complemento"
                   list="address"
                   // onChange={(e) => setComplement(e.target.value)}
                   // value={complement}
+                  {...register('complement')}
                 />
               </NumberAndComplementContainer>
               <DistrictCityUfContainer>
                 <DistrictInput
                   id="district"
-                  name="district"
+                  // name="district"
                   placeholder="Bairro"
                   list="address"
                   // onChange={(e) => setDistrict(e.target.value)}
                   // value={district}
+                  {...register('district')}
                 />
                 <CityInput
                   id="city"
-                  name="city"
+                  // name="city"
                   placeholder="Cidade"
                   list="address"
                   // onChange={(e) => setCity(e.target.value)}
                   // value={city}
+                  {...register('city')}
                 />
                 <UFInput
                   id="uf"
-                  name="uf"
+                  // name="uf"
                   placeholder="UF"
                   list="address"
                   // onChange={(e) => setUf(e.target.value)}
                   // value={uf}
+                  {...register('uf')}
                 />
               </DistrictCityUfContainer>
             </InputsContainer>
@@ -197,7 +209,7 @@ export const CheckoutPage = () => {
                 <Bank />
                 CARTÃO DE DEBITO
               </DebitCardButton>
-              <MoneyButton onClick={consoleInfo}>
+              <MoneyButton>
                 <Money />
                 DINHEIRO
               </MoneyButton>
