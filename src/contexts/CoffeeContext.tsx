@@ -2,6 +2,15 @@
 import { ReactNode, createContext, useState, useEffect } from 'react'
 import { CoffeeData, coffeeDataType } from '../data/coffeeData'
 
+interface address {
+  cep: string
+  road: string
+  numberHouse: string
+  complement: string
+  district: string
+  city: string
+  uf: string
+}
 interface CreateContextType {
   coffeeInfo: coffeeDataType[]
   addCoffee: (id: string) => void
@@ -10,6 +19,8 @@ interface CreateContextType {
   allActiveCoffee: () => coffeeDataType[]
   activeCoffeeInfo: coffeeDataType[]
   totalPay: number
+  setAddressUser: (address: address) => void
+  addressUser: address
 }
 
 export const CoffeeContext = createContext({} as CreateContextType)
@@ -24,6 +35,15 @@ export const CoffeeContextProvider = ({
   const [coffeeInfo, setCoffeeInfo] = useState<coffeeDataType[]>(CoffeeData)
   const [activeCoffeeInfo, setActiveCoffeeInfo] = useState<coffeeDataType[]>([])
   const [totalPay, setTotalPay] = useState(0)
+  const [addressUser, setAddressUser] = useState<address>({
+    cep: '',
+    road: '',
+    numberHouse: '',
+    complement: '',
+    district: '',
+    city: '',
+    uf: '',
+  })
 
   const addCoffee = (id: string) => {
     const newCoffeeInfo = [...coffeeInfo]
@@ -101,6 +121,8 @@ export const CoffeeContextProvider = ({
         activeCoffeeInfo,
         deleteCoffee,
         totalPay,
+        addressUser,
+        setAddressUser,
       }}
     >
       {children}
