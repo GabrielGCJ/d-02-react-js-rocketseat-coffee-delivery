@@ -228,11 +228,11 @@ export const CheckoutPage = () => {
                     <h2>R$ 0,00</h2>
                   )}
                 </TotalValue>
-                {/* <NavLink to="/success"> */}
-                <ConfirmationButton type="submit">
-                  <h3>CONFIRMAR PEDIDO</h3>
-                </ConfirmationButton>
-                {/* </NavLink> */}
+                <NavLink to="/success">
+                  <ConfirmationButton type="submit">
+                    <h3>CONFIRMAR PEDIDO</h3>
+                  </ConfirmationButton>
+                </NavLink>
               </CoffeeBalanceContainer>
             </CoffeeAndBalance>
           </SelectedCoffees>
