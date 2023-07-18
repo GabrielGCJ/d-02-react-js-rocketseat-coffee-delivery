@@ -9,22 +9,24 @@ export const CheckoutContainer = styled.div`
 
   width: 100%;
 
-  @media screen and (max-width: 780px) {
-    padding: 0% 7.22% 0%;
+  @media screen and (max-width: 1333px) {
+    align-items: center;
     flex-direction: column;
-
+    padding: 0% 7.22% 0%;
     font-size: 0.7rem;
   }
 
   @media screen and (max-width: 460px) {
-    padding: 0% 5% 0%;
+    align-items: center;
     flex-direction: column;
+    padding: 0% 5% 0%;
     font-size: 0.6rem;
   }
 
   @media screen and (max-width: 286px) {
-    padding: 0% 2% 0%;
+    align-items: center;
     flex-direction: column;
+    padding: 0% 2% 0%;
     font-size: 0.5rem;
   }
 `
@@ -47,6 +49,10 @@ export const DeliveryForm = styled.div`
   width: 40rem;
 
   border-radius: 5px;
+
+  @media screen and (max-width: 1410px) and (min-width: 1333px) {
+    width: 95%;
+  }
 `
 
 const TopText = styled.div`
@@ -153,6 +159,10 @@ export const FormOfPaymentContainer = styled.div`
   background-color: ${(props) => props.theme['gray-300']};
 
   border-radius: 5px;
+
+  @media screen and (max-width: 1410px) and (min-width: 1333px) {
+    width: 95%;
+  }
 `
 export const ButtonsContainer = styled.div`
   display: flex;
@@ -213,6 +223,10 @@ export const SelectedCoffees = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+
+  @media screen and (max-width: 1410px) and (min-width: 1333px) {
+    width: 90%;
+  }
 `
 
 export const CoffeeAndBalance = styled.div`
@@ -220,6 +234,9 @@ export const CoffeeAndBalance = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 1410px) and (min-width: 1333px) {
+    width: 100%;
+  }
 `
 
 export const TextSelectedCoffees = styled(TopText)``
@@ -228,6 +245,10 @@ export const CoffeeBalanceContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media screen and (max-width: 1410px) and (min-width: 1333px) {
+    width: 100%;
+  }
 `
 
 const BalanceProps = styled.div`
@@ -262,5 +283,9 @@ export const ConfirmationButton = styled.button`
     color: ${(props) => props.theme['yellow-300']};
     background: ${(props) => props.theme['yellow-900']};
     transition: color 0.3s, background-color 0.5s;
+  }
+
+  @media screen and (max-width: 1410px) and (min-width: 1333px) {
+    width: 300px;
   }
 `
