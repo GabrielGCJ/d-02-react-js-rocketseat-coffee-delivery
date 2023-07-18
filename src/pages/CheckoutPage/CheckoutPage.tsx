@@ -38,6 +38,7 @@ import {
   TotalValue,
   UFInput,
 } from './styles'
+
 import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
@@ -61,8 +62,8 @@ export const CheckoutPage = () => {
   }
 
   return (
-    <CheckoutContainer>
-      <form onSubmit={handleSubmit(handleCreateNewBuy)}>
+    <form onSubmit={handleSubmit(handleCreateNewBuy)}>
+      <CheckoutContainer>
         <DeliveryFormContainer>
           <TextDeliveryForm>
             <h3>Complete seu pedido</h3>
@@ -228,16 +229,22 @@ export const CheckoutPage = () => {
                     <h2>R$ 0,00</h2>
                   )}
                 </TotalValue>
-                <NavLink to="/success">
+                {addressUser.road !== '' ? (
+                  <NavLink to="/success">
+                    <ConfirmationButton type="submit">
+                      <h3>CONFIRMAR PEDIDO</h3>
+                    </ConfirmationButton>
+                  </NavLink>
+                ) : (
                   <ConfirmationButton type="submit">
                     <h3>CONFIRMAR PEDIDO</h3>
                   </ConfirmationButton>
-                </NavLink>
+                )}
               </CoffeeBalanceContainer>
             </CoffeeAndBalance>
           </SelectedCoffees>
         </SelectedCoffeesContainer>
-      </form>
-    </CheckoutContainer>
+      </CheckoutContainer>
+    </form>
   )
 }
