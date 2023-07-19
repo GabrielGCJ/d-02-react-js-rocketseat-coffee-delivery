@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import cifrao from '../../assents/dollar-sign.svg'
 
 import { useForm } from 'react-hook-form'
@@ -50,16 +50,25 @@ export const CheckoutPage = () => {
   const { activeCoffeeInfo, totalPay, setAddressUser, addressUser } =
     useContext(CoffeeContext)
 
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit, watch } = useForm()
 
   const handleCreateNewBuy = async (data: any) => {
     setAddressUser(data)
   }
+
   console.log(addressUser)
 
   const consoleNow = () => {
     console.log(addressUser)
   }
+
+  const cep = watch('cep')
+  const road = watch('road')
+  const numberHouse = watch('numberHouse')
+  const complement = watch('complement')
+  const district = watch('district')
+  const city = watch('city')
+  const uf = watch('uf')
 
   return (
     <form onSubmit={handleSubmit(handleCreateNewBuy)}>
@@ -104,7 +113,7 @@ export const CheckoutPage = () => {
               />
               <NumberAndComplementContainer>
                 <NumberInput
-                  id="number"
+                  id="numberHouse"
                   // name="numberHouse"
                   placeholder="Numero"
                   list="address"
@@ -236,7 +245,18 @@ export const CheckoutPage = () => {
                     </ConfirmationButton>
                   </NavLink>
                 ) : (
-                  <ConfirmationButton type="submit">
+                  <ConfirmationButton
+                    type="submit"
+                    disabled={
+                      !cep ||
+                      !road ||
+                      !numberHouse ||
+                      !complement ||
+                      !district ||
+                      !city ||
+                      !uf
+                    }
+                  >
                     <h3>CONFIRMAR PEDIDO</h3>
                   </ConfirmationButton>
                 )}
