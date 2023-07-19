@@ -16,7 +16,7 @@ interface CreateContextType {
   addCoffee: (id: string) => void
   decreaseCoffee: (id: string) => void
   deleteCoffee: (id: string) => void
-  allActiveCoffee: () => coffeeDataType[]
+  allActiveCoffee: () => void
   activeCoffeeInfo: coffeeDataType[]
   totalPay: number
   setAddressUser: (address: address) => void
@@ -55,7 +55,6 @@ export const CoffeeContextProvider = ({
     }
 
     setCoffeeInfo(newCoffeeInfo)
-    console.log(allActiveCoffee())
   }
 
   const decreaseCoffee = (id: string) => {
@@ -68,23 +67,27 @@ export const CoffeeContextProvider = ({
     }
 
     setCoffeeInfo(newCoffeeInfo)
-    console.log(allActiveCoffee())
   }
 
   const deleteCoffee = (id: string) => {
-    const newCoffeeInfo = [...coffeeInfo]
+    const coffee = [...coffeeInfo]
+    let coffeeName = ''
 
-    for (let i = 0; i < newCoffeeInfo.length; i++) {
-      if (newCoffeeInfo[i].id === id) {
-        newCoffeeInfo[i].quantity = 0
+    for (let i = 0; i < coffee.length; i++) {
+      if (coffee[i].id === id) {
+        coffee[i].quantity = 0
+        coffeeName = coffee[i].name
       }
     }
 
-    setCoffeeInfo(newCoffeeInfo)
-    console.log(allActiveCoffee())
+    setCoffeeInfo(coffee)
+    console.log(`Cafe ${coffeeName} removido!`)
   }
 
-  useEffect(() => {}, [addCoffee, decreaseCoffee, setCoffeeInfo])
+  useEffect(() => {
+    allActiveCoffee()
+    checkTotalPayment()
+  }, [coffeeInfo])
 
   const allActiveCoffee = () => {
     const activeCoffee: coffeeDataType[] = []
@@ -95,8 +98,7 @@ export const CoffeeContextProvider = ({
       }
     }
     setActiveCoffeeInfo(activeCoffee)
-    checkTotalPayment()
-    return activeCoffee
+    console.log(activeCoffee)
   }
 
   const checkTotalPayment = () => {
@@ -107,8 +109,8 @@ export const CoffeeContextProvider = ({
         totalPayment += coffeeInfo[i].price * coffeeInfo[i].quantity
       }
     }
-    console.log(`Total a pagar ${totalPayment}`)
     setTotalPay(totalPayment)
+    console.log(`Total a pagar ${totalPayment}`)
   }
 
   return (
