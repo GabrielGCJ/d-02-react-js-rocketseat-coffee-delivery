@@ -2,6 +2,8 @@ import { useContext } from 'react'
 import cifrao from '../../assents/dollar-sign.svg'
 
 import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import * as zod from 'zod'
 
 import {
   ButtonsContainer,
@@ -50,7 +52,19 @@ export const CheckoutPage = () => {
   const { activeCoffeeInfo, totalPay, setAddressUser, addressUser } =
     useContext(CoffeeContext)
 
-  const { register, handleSubmit, watch } = useForm()
+  const addressForm = zod.object({
+    cep: zod.string().min(8, 'Informe o Cpf'),
+    road: zod.string().min(1, 'Informe o Cpf'),
+    numberHouse: zod.string().min(1, 'Informe o Cpf'),
+    complement: zod.string().min(1, 'Informe o Cpf'),
+    district: zod.string().min(1, 'Informe o Cpf'),
+    city: zod.string().min(1, 'Informe o Cpf'),
+    uf: zod.string().min(1, 'Informe o Cpf'),
+  })
+
+  const { register, handleSubmit, watch } = useForm({
+    resolver: zodResolver(addressForm),
+  })
 
   const handleCreateNewBuy = async (data: any) => {
     setAddressUser(data)
@@ -62,13 +76,13 @@ export const CheckoutPage = () => {
     console.log(addressUser)
   }
 
-  const cep = watch('cep')
-  const road = watch('road')
-  const numberHouse = watch('numberHouse')
-  const complement = watch('complement')
-  const district = watch('district')
-  const city = watch('city')
-  const uf = watch('uf')
+  // const cep = watch('cep')
+  // const road = watch('road')
+  // const numberHouse = watch('numberHouse')
+  // const complement = watch('complement')
+  // const district = watch('district')
+  // const city = watch('city')
+  // const uf = watch('uf')
 
   return (
     <form onSubmit={handleSubmit(handleCreateNewBuy)}>
@@ -181,16 +195,16 @@ export const CheckoutPage = () => {
               </TextInformations>
             </InstructionsContainer>
             <ButtonsContainer>
-              <CreditCardButton>
+              <CreditCardButton type="button">
                 <CreditCard />
                 CARTÃO DE CREDITO
               </CreditCardButton>
-              <DebitCardButton>
+              <DebitCardButton type="button">
                 <Bank />
                 CARTÃO DE DEBITO
               </DebitCardButton>
-              <MoneyButton>
-                <Money onClick={consoleNow} />
+              <MoneyButton type="button" onClick={consoleNow}>
+                <Money />
                 DINHEIRO
               </MoneyButton>
             </ButtonsContainer>
@@ -238,7 +252,7 @@ export const CheckoutPage = () => {
                     <h2>R$ 0,00</h2>
                   )}
                 </TotalValue>
-                {addressUser.road !== '' ? (
+                {/* {addressUser.road !== '' ? (
                   <NavLink to="/success">
                     <ConfirmationButton type="submit">
                       <h3>CONFIRMAR PEDIDO</h3>
@@ -247,19 +261,19 @@ export const CheckoutPage = () => {
                 ) : (
                   <ConfirmationButton
                     type="submit"
-                    disabled={
-                      !cep ||
-                      !road ||
-                      !numberHouse ||
-                      !complement ||
-                      !district ||
-                      !city ||
-                      !uf
-                    }
+                    // disabled={
+                    //   !cep ||
+                    //   !road ||
+                    //   !numberHouse ||
+                    //   !complement ||
+                    //   !district ||
+                    //   !city ||
+                    //   !uf
+                    // }
                   >
                     <h3>CONFIRMAR PEDIDO</h3>
                   </ConfirmationButton>
-                )}
+                )} */}
               </CoffeeBalanceContainer>
             </CoffeeAndBalance>
           </SelectedCoffees>

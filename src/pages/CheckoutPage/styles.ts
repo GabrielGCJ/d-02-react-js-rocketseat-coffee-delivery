@@ -221,22 +221,21 @@ export const SelectedCoffees = styled.div`
   width: 448px;
   padding: 40px;
   flex-direction: column;
-  align-items: flex-start;
   gap: 24px;
 
-  @media screen and (max-width: 1410px) and (min-width: 1333px) {
+  /* @media screen and (max-width: 1410px) and (min-width: 1333px) {
     width: 90%;
-  }
+  } */
 `
 
 export const CoffeeAndBalance = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  @media screen and (max-width: 1410px) and (min-width: 1333px) {
+  justify-content: space-between;
+  /* @media screen and (max-width: 1410px) and (min-width: 1333px) {
     width: 100%;
-  }
+  } */
 `
 
 export const TextSelectedCoffees = styled(TopText)``
@@ -246,14 +245,19 @@ export const CoffeeBalanceContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  @media screen and (max-width: 1410px) and (min-width: 1333px) {
+  width: 100%;
+
+  /* @media screen and (max-width: 1410px) and (min-width: 1333px) {
     width: 100%;
-  }
+  } */
 `
 
 const BalanceProps = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
+
+  width: 100%;
 `
 
 export const TotalItems = styled(BalanceProps)``
