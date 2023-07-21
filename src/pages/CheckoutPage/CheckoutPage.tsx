@@ -6,26 +6,21 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
 
 import {
-  ButtonsContainer,
   CepInput,
   CheckoutContainer,
+  InstructionsContainer,
+  TextInformations,
   CityInput,
   CoffeeAndBalance,
   CoffeeBalanceContainer,
   ComplementInput,
-  ConfirmationButton,
-  CreditCardButton,
-  DebitCardButton,
   DeliveryForm,
   DeliveryFormContainer,
   DeliveryValue,
   DistrictCityUfContainer,
   DistrictInput,
-  FormOfPaymentContainer,
   IconContainer,
   InputsContainer,
-  InstructionsContainer,
-  MoneyButton,
   NumberAndComplementContainer,
   NumberInput,
   RoadInput,
@@ -34,7 +29,6 @@ import {
   Text1,
   Text2,
   TextDeliveryForm,
-  TextInformations,
   TextSelectedCoffees,
   TotalItems,
   TotalValue,
@@ -47,6 +41,7 @@ import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
 import { DeliveryValuePay } from '../../data/coffeeData'
 import { Bank, CreditCard, MapPinLine, Money } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
+import { FormOfPayment } from '../../components/FormOfPayment/FormOfPayment'
 
 export const CheckoutPage = () => {
   const { activeCoffeeInfo, totalPay, setAddressUser, addressUser } =
@@ -176,10 +171,9 @@ export const CheckoutPage = () => {
               </DistrictCityUfContainer>
             </InputsContainer>
           </DeliveryForm>
-          <FormOfPaymentContainer>
+          {/* <FormOfPaymentContainer>
             <InstructionsContainer>
               <IconContainer>
-                {/* <MapPinLine /> */}
                 <img src={cifrao} alt="" />
               </IconContainer>
               <TextInformations>
@@ -208,7 +202,8 @@ export const CheckoutPage = () => {
                 DINHEIRO
               </MoneyButton>
             </ButtonsContainer>
-          </FormOfPaymentContainer>
+          </FormOfPaymentContainer> */}
+          <FormOfPayment />
         </DeliveryFormContainer>
 
         <SelectedCoffeesContainer>
