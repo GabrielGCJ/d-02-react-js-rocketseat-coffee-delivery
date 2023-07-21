@@ -53,16 +53,31 @@ export const ButtonsContainer = styled.div`
   padding-top: 25px;
 `
 
-const BaseButton = styled.button`
+interface StyledButtonProps {
+  isClicked: boolean
+  // onClick: () => void
+}
+
+const BaseButton = styled.button<StyledButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
 
   font-size: 0.7rem;
 
-  background-color: ${(props) => props.theme['gray-500']};
-  color: ${(props) => props.theme['gray-800']};
-  border: transparent;
+  background: ${(props) =>
+    props.isClicked ? props.theme['yellow-600'] : props.theme['gray-500']};
+
+  /* background: ${(props) => props.theme['gray-500']}; */
+
+  color: ${(props) =>
+    props.isClicked ? props.theme['purple-600'] : props.theme['gray-800']};
+
+  /* border: transparent; */
+
+  border: 2px solid
+    ${(props) =>
+      props.isClicked ? props.theme['purple-600'] : props.theme['gray-500']};
   border-radius: 5px;
 
   width: 100%;
@@ -80,6 +95,11 @@ const BaseButton = styled.button`
     color: ${(props) => props.theme['purple-600']};
     background: ${(props) => props.theme['yellow-600']};
     transition: color 0.3s, background-color 0.5s;
+  }
+
+  :active {
+    color: red;
+    background: ${(props) => props.theme['yellow-900']};
   }
 `
 

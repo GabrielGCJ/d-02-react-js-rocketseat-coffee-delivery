@@ -13,8 +13,39 @@ import {
 
 import { Bank, CreditCard, Money } from 'phosphor-react'
 import cifrao from '../../assents/dollar-sign.svg'
+import { useState } from 'react'
 
 export const FormOfPayment = () => {
+  const [isClicked, setIsClicked] = useState({
+    credit: false,
+    debit: true,
+    money: false,
+  })
+
+  const handleClickCredit = () => {
+    setIsClicked({
+      credit: true,
+      debit: false,
+      money: false,
+    })
+  }
+
+  const handleClickDebit = () => {
+    setIsClicked({
+      credit: false,
+      debit: true,
+      money: false,
+    })
+  }
+
+  const handleClickMoney = () => {
+    setIsClicked({
+      credit: false,
+      debit: false,
+      money: true,
+    })
+  }
+
   return (
     <FormOfPaymentContainer>
       <InstructionsContainer>
@@ -34,15 +65,27 @@ export const FormOfPayment = () => {
         </TextInformations>
       </InstructionsContainer>
       <ButtonsContainer>
-        <CreditCardButton type="button">
+        <CreditCardButton
+          type="button"
+          isClicked={isClicked.credit}
+          onClick={handleClickCredit}
+        >
           <CreditCard />
           CARTÃO DE CREDITO
         </CreditCardButton>
-        <DebitCardButton type="button">
+        <DebitCardButton
+          type="button"
+          isClicked={isClicked.debit}
+          onClick={handleClickDebit}
+        >
           <Bank />
           CARTÃO DE DEBITO
         </DebitCardButton>
-        <MoneyButton type="button">
+        <MoneyButton
+          type="button"
+          isClicked={isClicked.money}
+          onClick={handleClickMoney}
+        >
           <Money />
           DINHEIRO
         </MoneyButton>

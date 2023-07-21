@@ -42,6 +42,7 @@ import { DeliveryValuePay } from '../../data/coffeeData'
 import { Bank, CreditCard, MapPinLine, Money } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
 import { FormOfPayment } from '../../components/FormOfPayment/FormOfPayment'
+import { NewComponent } from '../../components/NewComponent/NewComponent'
 
 export const CheckoutPage = () => {
   const { activeCoffeeInfo, totalPay, setAddressUser, addressUser } =
@@ -171,39 +172,8 @@ export const CheckoutPage = () => {
               </DistrictCityUfContainer>
             </InputsContainer>
           </DeliveryForm>
-          {/* <FormOfPaymentContainer>
-            <InstructionsContainer>
-              <IconContainer>
-                <img src={cifrao} alt="" />
-              </IconContainer>
-              <TextInformations>
-                <Text1>
-                  <p>Pagamento</p>
-                </Text1>
-                <Text2>
-                  <p>
-                    O pagamento é feito na entrega. Escolha a forma que deseja
-                    pagar
-                  </p>
-                </Text2>
-              </TextInformations>
-            </InstructionsContainer>
-            <ButtonsContainer>
-              <CreditCardButton type="button">
-                <CreditCard />
-                CARTÃO DE CREDITO
-              </CreditCardButton>
-              <DebitCardButton type="button">
-                <Bank />
-                CARTÃO DE DEBITO
-              </DebitCardButton>
-              <MoneyButton type="button" onClick={consoleNow}>
-                <Money />
-                DINHEIRO
-              </MoneyButton>
-            </ButtonsContainer>
-          </FormOfPaymentContainer> */}
           <FormOfPayment />
+          <NewComponent />
         </DeliveryFormContainer>
 
         <SelectedCoffeesContainer>
