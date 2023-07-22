@@ -33,6 +33,7 @@ import {
   TotalItems,
   TotalValue,
   UFInput,
+  ConfirmationButton,
 } from './styles'
 
 import { CoffeeContext } from '../../contexts/CoffeeContext'
@@ -217,7 +218,7 @@ export const CheckoutPage = () => {
                     <h2>R$ 0,00</h2>
                   )}
                 </TotalValue>
-                {/* {addressUser.road !== '' ? (
+                {addressUser.road !== '' ? (
                   <NavLink to="/success">
                     <ConfirmationButton type="submit">
                       <h3>CONFIRMAR PEDIDO</h3>
@@ -238,7 +239,7 @@ export const CheckoutPage = () => {
                   >
                     <h3>CONFIRMAR PEDIDO</h3>
                   </ConfirmationButton>
-                )} */}
+                )}
               </CoffeeBalanceContainer>
             </CoffeeAndBalance>
           </SelectedCoffees>
