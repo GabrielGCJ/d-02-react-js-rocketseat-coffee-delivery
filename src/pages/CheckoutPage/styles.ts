@@ -294,3 +294,30 @@ export const ConfirmationButton = styled.button`
     width: 300px;
   }
 `
+// export const ConfirmationButton = styled.button`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   border: transparent;
+
+//   width: 368px;
+//   height: 46px;
+
+//   border-radius: 8px;
+
+//   font-size: 0.8rem;
+
+//   background-color: ${(props) => props.theme['yellow-600']};
+//   color: ${(props) => props.theme['gray-100']};
+
+//   :hover {
+//     color: ${(props) => props.theme['yellow-300']};
+//     background: ${(props) => props.theme['yellow-900']};
+//     transition: color 0.3s, background-color 0.5s;
+//   }
+
+//   @media screen and (max-width: 1410px) and (min-width: 1333px) {
+//     width: 300px;
+//   }
+// `
