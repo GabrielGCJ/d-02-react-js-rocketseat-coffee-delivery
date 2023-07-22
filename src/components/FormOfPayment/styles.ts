@@ -71,7 +71,7 @@ const BaseButton = styled.button<StyledButtonProps>`
   /* background: ${(props) => props.theme['gray-500']}; */
 
   color: ${(props) =>
-    props.isClicked ? props.theme['purple-600'] : props.theme['gray-800']};
+    props.isClicked ? props.theme['purple-900'] : props.theme['gray-800']};
 
   /* border: transparent; */
 
@@ -92,13 +92,13 @@ const BaseButton = styled.button<StyledButtonProps>`
   }
 
   :hover {
-    color: ${(props) => props.theme['purple-600']};
+    color: ${(props) => props.theme.white};
     background: ${(props) => props.theme['yellow-600']};
     transition: color 0.3s, background-color 0.5s;
   }
 
   :active {
-    color: red;
+    color: ${(props) => props.theme['purple-600']};
     background: ${(props) => props.theme['yellow-900']};
   }
 `

@@ -9,6 +9,7 @@ import coffeeDeliveryLogo from '../../assents/coffeeDeliveryLogo.svg'
 import buttonCart from '../../assents/buttonCart.svg'
 import { MapPin } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
+import { Location } from '../Location/Location'
 
 export const Header = () => {
   return (
@@ -22,7 +23,8 @@ export const Header = () => {
       <CartLocationContainer>
         <LocationContainer>
           <MapPin size={26} weight="fill" /* color="#8047F8" */ />
-          <p>São José do Vale do Rio Preto, RJ</p>
+          {/* <p>São José do Vale do Rio Preto, RJ</p> */}
+          <Location />
         </LocationContainer>
 
         <NavLink to="/checkout">
