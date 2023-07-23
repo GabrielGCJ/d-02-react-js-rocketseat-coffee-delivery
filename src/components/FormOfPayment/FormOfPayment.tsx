@@ -13,12 +13,14 @@ import {
 
 import { Bank, CreditCard, Money } from 'phosphor-react'
 import cifrao from '../../assents/dollar-sign.svg'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 export const FormOfPayment = () => {
+  const { setFormOfPayment } = useContext(CoffeeContext)
   const [isClicked, setIsClicked] = useState({
     credit: false,
-    debit: true,
+    debit: false,
     money: false,
   })
 
@@ -28,6 +30,7 @@ export const FormOfPayment = () => {
       debit: false,
       money: false,
     })
+    setFormOfPayment('Cartão de Credito')
   }
 
   const handleClickDebit = () => {
@@ -36,6 +39,7 @@ export const FormOfPayment = () => {
       debit: true,
       money: false,
     })
+    setFormOfPayment('Debit')
   }
 
   const handleClickMoney = () => {
@@ -44,6 +48,7 @@ export const FormOfPayment = () => {
       debit: false,
       money: true,
     })
+    setFormOfPayment('Money')
   }
 
   return (
