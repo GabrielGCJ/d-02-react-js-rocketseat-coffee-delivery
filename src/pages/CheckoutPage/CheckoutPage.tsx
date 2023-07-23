@@ -34,6 +34,7 @@ import {
   TotalValue,
   UFInput,
   ConfirmationButton,
+  Confirmation,
 } from './styles'
 
 import { CoffeeContext } from '../../contexts/CoffeeContext'
@@ -55,16 +56,20 @@ export const CheckoutPage = () => {
   } = useContext(CoffeeContext)
 
   const addressForm = zod.object({
-    cep: zod.string().min(8, 'Informe o Cpf'),
-    road: zod.string().min(1, 'Informe o Cpf'),
-    numberHouse: zod.string().min(1, 'Informe o Cpf'),
-    complement: zod.string().min(1, 'Informe o Cpf'),
-    district: zod.string().min(1, 'Informe o Cpf'),
-    city: zod.string().min(1, 'Informe o Cpf'),
-    uf: zod.string().min(1, 'Informe o Cpf'),
+    cep: zod.string().min(8, 'Informe o CPF'),
+    road: zod.string().min(1, 'Informe a rua'),
+    numberHouse: zod.string().min(1, 'Informe o numero da casa'),
+    // complement: zod.string().min(1, 'Informe o Cpf'),
+    district: zod.string().min(1, 'Informe o bairro'),
+    city: zod.string().min(1, 'Informe a cidade'),
+    uf: zod.string().min(1, 'Informe o estado'),
   })
 
-  const { register, handleSubmit, watch } = useForm({
+  const {
+    register,
+    handleSubmit,
+    // ,watch
+  } = useForm({
     resolver: zodResolver(addressForm),
   })
 
@@ -74,10 +79,10 @@ export const CheckoutPage = () => {
 
   console.log(addressUser)
 
-  const consoleNow = () => {
-    console.log(addressUser)
-  }
-  
+  // const consoleNow = () => {
+  //   console.log(addressUser)
+  // }
+
   // const cep = watch('cep')
   // const road = watch('road')
   // const numberHouse = watch('numberHouse')
@@ -225,9 +230,11 @@ export const CheckoutPage = () => {
                 </TotalValue>
                 {addressUser.road !== '' && formOfPayment !== '' ? (
                   <NavLink to="/success">
+                    {/* <Confirmation> */}
                     <ConfirmationButton type="submit">
                       <h3>CONFIRMAR PEDIDO</h3>
                     </ConfirmationButton>
+                    {/* </Confirmation> */}
                   </NavLink>
                 ) : (
                   <ConfirmationButton
