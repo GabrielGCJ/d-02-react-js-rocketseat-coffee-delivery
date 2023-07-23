@@ -17,7 +17,7 @@ import ilustration from '../../assents/Illustration.svg'
 import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 export const SuccessPage = () => {
-  const { addressUser } = useContext(CoffeeContext)
+  const { addressUser, formOfPayment } = useContext(CoffeeContext)
   return (
     <SucessPageContainer>
       <TextContainer>
@@ -54,7 +54,7 @@ export const SuccessPage = () => {
             <TextInformation>
               <p>Pagamento na entrega</p>
               <p>
-                <strong>Cartão de Crédito</strong>
+                <strong>{formOfPayment}</strong>
               </p>
             </TextInformation>
           </FormOfPaymentInformationContainer>

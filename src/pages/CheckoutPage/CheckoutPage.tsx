@@ -40,14 +40,19 @@ import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
 import { DeliveryValuePay } from '../../data/coffeeData'
-import { Bank, CreditCard, MapPinLine, Money } from 'phosphor-react'
+import { MapPinLine } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
 import { FormOfPayment } from '../../components/FormOfPayment/FormOfPayment'
-import { NewComponent } from '../../components/NewComponent/NewComponent'
+// import { NewComponent } from '../../components/NewComponent/NewComponent'
 
 export const CheckoutPage = () => {
-  const { activeCoffeeInfo, totalPay, setAddressUser, addressUser } =
-    useContext(CoffeeContext)
+  const {
+    activeCoffeeInfo,
+    totalPay,
+    setAddressUser,
+    addressUser,
+    formOfPayment,
+  } = useContext(CoffeeContext)
 
   const addressForm = zod.object({
     cep: zod.string().min(8, 'Informe o Cpf'),
@@ -72,7 +77,7 @@ export const CheckoutPage = () => {
   const consoleNow = () => {
     console.log(addressUser)
   }
-
+  
   // const cep = watch('cep')
   // const road = watch('road')
   // const numberHouse = watch('numberHouse')
@@ -174,7 +179,7 @@ export const CheckoutPage = () => {
             </InputsContainer>
           </DeliveryForm>
           <FormOfPayment />
-          <NewComponent />
+          {/* <NewComponent /> */}
         </DeliveryFormContainer>
 
         <SelectedCoffeesContainer>
@@ -218,7 +223,7 @@ export const CheckoutPage = () => {
                     <h2>R$ 0,00</h2>
                   )}
                 </TotalValue>
-                {addressUser.road !== '' ? (
+                {addressUser.road !== '' && formOfPayment !== '' ? (
                   <NavLink to="/success">
                     <ConfirmationButton type="submit">
                       <h3>CONFIRMAR PEDIDO</h3>
