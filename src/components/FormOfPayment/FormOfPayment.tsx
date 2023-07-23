@@ -39,7 +39,7 @@ export const FormOfPayment = () => {
       debit: true,
       money: false,
     })
-    setFormOfPayment('Debit')
+    setFormOfPayment('Cartão de Debito')
   }
 
   const handleClickMoney = () => {
@@ -48,7 +48,7 @@ export const FormOfPayment = () => {
       debit: false,
       money: true,
     })
-    setFormOfPayment('Money')
+    setFormOfPayment('Dinheiro')
   }
 
   return (
