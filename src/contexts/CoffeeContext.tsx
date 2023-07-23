@@ -21,6 +21,8 @@ interface CreateContextType {
   totalPay: number
   setAddressUser: (address: address) => void
   addressUser: address
+  setFormOfPayment: (form: string) => void
+  formOfPayment: string
 }
 
 export const CoffeeContext = createContext({} as CreateContextType)
@@ -35,6 +37,7 @@ export const CoffeeContextProvider = ({
   const [coffeeInfo, setCoffeeInfo] = useState<coffeeDataType[]>(CoffeeData)
   const [activeCoffeeInfo, setActiveCoffeeInfo] = useState<coffeeDataType[]>([])
   const [totalPay, setTotalPay] = useState(0)
+  const [formOfPayment, setFormOfPayment] = useState('')
   const [addressUser, setAddressUser] = useState<address>({
     cep: '',
     road: '',
@@ -125,6 +128,8 @@ export const CoffeeContextProvider = ({
         totalPay,
         addressUser,
         setAddressUser,
+        formOfPayment,
+        setFormOfPayment,
       }}
     >
       {children}
