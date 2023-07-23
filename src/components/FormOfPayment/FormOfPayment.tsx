@@ -71,7 +71,7 @@ export const FormOfPayment = () => {
       </InstructionsContainer>
       <ButtonsContainer>
         <CreditCardButton
-          type="button"
+          // type="button"
           isClicked={isClicked.credit}
           onClick={handleClickCredit}
         >
@@ -79,7 +79,7 @@ export const FormOfPayment = () => {
           CARTÃO DE CREDITO
         </CreditCardButton>
         <DebitCardButton
-          type="button"
+          // type="button"
           isClicked={isClicked.debit}
           onClick={handleClickDebit}
         >
@@ -87,7 +87,7 @@ export const FormOfPayment = () => {
           CARTÃO DE DEBITO
         </DebitCardButton>
         <MoneyButton
-          type="button"
+          // type="button"
           isClicked={isClicked.money}
           onClick={handleClickMoney}
         >
