@@ -122,6 +122,7 @@ export const CheckoutPage = () => {
                 // onChange={(e) => setCep(e.target.value)}
                 // value={cep}
                 {...register('cep')}
+                required
               />
               <RoadInput
                 id="road"
@@ -131,6 +132,7 @@ export const CheckoutPage = () => {
                 // onChange={(e) => setRoad(e.target.value)}
                 // value={road}
                 {...register('road')}
+                required
               />
               <NumberAndComplementContainer>
                 <NumberInput
@@ -141,6 +143,7 @@ export const CheckoutPage = () => {
                   // onChange={(e) => setNumberHouse(e.target.value)}
                   // value={numberHouse}
                   {...register('numberHouse')}
+                  required
                 />
                 <ComplementInput
                   id="complement"
@@ -161,6 +164,7 @@ export const CheckoutPage = () => {
                   // onChange={(e) => setDistrict(e.target.value)}
                   // value={district}
                   {...register('district')}
+                  required
                 />
                 <CityInput
                   id="city"
@@ -170,6 +174,7 @@ export const CheckoutPage = () => {
                   // onChange={(e) => setCity(e.target.value)}
                   // value={city}
                   {...register('city')}
+                  required
                 />
                 <UFInput
                   id="uf"
@@ -179,6 +184,7 @@ export const CheckoutPage = () => {
                   // onChange={(e) => setUf(e.target.value)}
                   // value={uf}
                   {...register('uf')}
+                  required
                 />
               </DistrictCityUfContainer>
             </InputsContainer>
