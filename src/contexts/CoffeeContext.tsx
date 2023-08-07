@@ -113,7 +113,7 @@ export const CoffeeContextProvider = ({
       }
     }
     setTotalPay(totalPayment)
-    console.log(`Total a pagar ${totalPayment}`)
+    console.log(`Total a pagar ${totalPayment.toFixed(2).replace('.', ',')}`)
   }
 
   return (
