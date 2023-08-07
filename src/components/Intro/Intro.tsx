@@ -1,3 +1,4 @@
+import { icon1, icon2, icon3, icon4, imgIntro } from '../../assents'
 import {
   FocusMessageContainer,
   ImageContainer,
@@ -7,11 +8,7 @@ import {
   IntroOutsideContainer,
   SecondaryMessageContainer,
 } from './styles'
-import imgIntro from '../../assents/imgIntro.svg'
-import icon1 from '../../assents/iconsIntro/icon1.svg'
-import icon2 from '../../assents/iconsIntro/icon2.svg'
-import icon3 from '../../assents/iconsIntro/icon3.svg'
-import icon4 from '../../assents/iconsIntro/icon4.svg'
+
 export const Intro = () => {
   return (
     <IntroOutsideContainer>
