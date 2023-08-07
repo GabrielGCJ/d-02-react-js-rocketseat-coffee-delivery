@@ -1,9 +1,14 @@
 import { useContext } from 'react'
-import cifrao from '../../assents/dollar-sign.svg'
-
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
 import * as zod from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+
+import { DeliveryValuePay } from '../../data/coffeeData'
+import { MapPinLine } from 'phosphor-react'
+import { NavLink } from 'react-router-dom'
+import { FormOfPayment } from './components/FormOfPayment/FormOfPayment'
+import { SelectedCoffee } from './components/SelectedCoffee/SelectedCoffee'
 
 import {
   CepInput,
@@ -36,15 +41,6 @@ import {
   ConfirmationButton,
   Confirmation,
 } from './styles'
-
-import { CoffeeContext } from '../../contexts/CoffeeContext'
-
-import { SelectedCoffee } from '../../components/SelectedCoffee/SelectedCoffee'
-import { DeliveryValuePay } from '../../data/coffeeData'
-import { MapPinLine } from 'phosphor-react'
-import { NavLink } from 'react-router-dom'
-import { FormOfPayment } from '../../components/FormOfPayment/FormOfPayment'
-// import { NewComponent } from '../../components/NewComponent/NewComponent'
 
 export const CheckoutPage = () => {
   const {

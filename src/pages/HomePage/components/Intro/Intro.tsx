@@ -1,4 +1,4 @@
-import { icon1, icon2, icon3, icon4, imgIntro } from '../../assents'
+import { icon1, icon2, icon3, icon4, imgIntro } from '../../../../assents'
 import {
   FocusMessageContainer,
   ImageContainer,

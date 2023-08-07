@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { CoffeeContext } from '../../../../contexts/CoffeeContext'
 import { Trash } from 'phosphor-react'
 
 import {
@@ -13,8 +15,7 @@ import {
   TrashContainer,
   SelectedCoffeeExternalContainer,
 } from './styles'
-import { useContext } from 'react'
-import { CoffeeContext } from '../../contexts/CoffeeContext'
+// import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 interface SelectedCoffeeType {
   id: string
