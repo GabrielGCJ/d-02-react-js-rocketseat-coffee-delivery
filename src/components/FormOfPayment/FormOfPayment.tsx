@@ -1,3 +1,7 @@
+import { CoffeeContext } from '../../contexts/CoffeeContext'
+import { useContext, useState } from 'react'
+import { Bank, CreditCard, Money } from 'phosphor-react'
+import { dollarSing } from '../../assents'
 import {
   FormOfPaymentContainer,
   InstructionsContainer,
@@ -10,11 +14,6 @@ import {
   Text1,
   Text2,
 } from './styles'
-
-import { Bank, CreditCard, Money } from 'phosphor-react'
-import cifrao from '../../assents/dollar-sign.svg'
-import { useContext, useState } from 'react'
-import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 export const FormOfPayment = () => {
   const { setFormOfPayment } = useContext(CoffeeContext)
@@ -56,7 +55,7 @@ export const FormOfPayment = () => {
       <InstructionsContainer>
         <IconContainer>
           {/* <MapPinLine /> */}
-          <img src={cifrao} alt="" />
+          <img src={dollarSing} alt="" />
         </IconContainer>
         <TextInformations>
           <Text1>

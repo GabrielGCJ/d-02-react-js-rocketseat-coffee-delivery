@@ -1,3 +1,7 @@
+import { NavLink } from 'react-router-dom'
+import { Location } from '../Location/Location'
+import { coffeeDeliveryLogo, buttonCart } from '../../assents'
+import { MapPin } from 'phosphor-react'
 import {
   CartLinkContainer,
   CartLocationContainer,
@@ -5,11 +9,6 @@ import {
   LocationContainer,
   LogoContainer,
 } from './styles'
-import coffeeDeliveryLogo from '../../assents/coffeeDeliveryLogo.svg'
-import buttonCart from '../../assents/buttonCart.svg'
-import { MapPin } from 'phosphor-react'
-import { NavLink } from 'react-router-dom'
-import { Location } from '../Location/Location'
 
 export const Header = () => {
   return (

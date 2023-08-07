@@ -1,7 +1,5 @@
 import { useContext } from 'react'
-import location from '../../assents/IconLocationSucessPage.svg'
-import timer from '../../assents/IconTimerSucessPage.svg'
-import cash from '../../assents/IconCashSucessPage.svg'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 import {
   DeliveryInformations,
@@ -13,8 +11,13 @@ import {
   TextInformation,
   TimerInformationContainer,
 } from './styles'
-import ilustration from '../../assents/Illustration.svg'
-import { CoffeeContext } from '../../contexts/CoffeeContext'
+
+import {
+  iconCash,
+  iconLocationSucessPage,
+  iconTimer,
+  ilustration,
+} from '../../assents'
 
 export const SuccessPage = () => {
   const { addressUser, formOfPayment } = useContext(CoffeeContext)
@@ -27,7 +30,7 @@ export const SuccessPage = () => {
       <InformationsAndImg>
         <DeliveryInformations>
           <LocationInformationContainer>
-            <img src={location} alt="" />
+            <img src={iconLocationSucessPage} alt="" />
             <TextInformation>
               <p>
                 Entrega em{' '}
@@ -41,7 +44,7 @@ export const SuccessPage = () => {
             </TextInformation>
           </LocationInformationContainer>
           <TimerInformationContainer>
-            <img src={timer} alt="" />
+            <img src={iconTimer} alt="" />
             <TextInformation>
               <p>Previsão de entrega</p>
               <p>
@@ -50,7 +53,7 @@ export const SuccessPage = () => {
             </TextInformation>
           </TimerInformationContainer>
           <FormOfPaymentInformationContainer>
-            <img src={cash} alt="" />
+            <img src={iconCash} alt="" />
             <TextInformation>
               <p>Pagamento na entrega</p>
               <p>
