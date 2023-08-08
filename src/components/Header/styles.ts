@@ -12,9 +12,8 @@ export const HeaderContainer = styled.header`
 
   width: 100%;
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 999px) {
     padding: 0% 7.22% 0%;
-
     font-size: 0.7rem;
   }
 
