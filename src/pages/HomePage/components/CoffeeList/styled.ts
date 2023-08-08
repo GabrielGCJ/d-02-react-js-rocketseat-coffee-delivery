@@ -3,14 +3,10 @@ import styled from 'styled-components'
 export const CoffeeListExternalContainer = styled.div`
   display: flex;
   align-items: center;
-
-  /* background-color: red; */
-
   padding: 1rem 10rem 0rem;
-
   width: 100%;
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 999px) {
     padding: 0% 7.22% 0%;
   }
 
@@ -38,8 +34,6 @@ export const CoffeeText = styled.div`
 `
 
 export const AllCoffeesContainer = styled.div`
-  /* background-color: purple; */
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,10 +44,13 @@ export const AllCoffeesContainer = styled.div`
 `
 
 export const AllCoffees = styled.div`
-  /* background-color: blue; */
   justify-content: start;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+
+  @media screen and (max-width: 900px) {
+    justify-content: center;
+  }
 `
