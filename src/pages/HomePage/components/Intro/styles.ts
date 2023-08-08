@@ -26,7 +26,7 @@ export const IntroContainer = styled.div`
 export const InformsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   text-align: justify;
 
   width: 36.75rem;
@@ -70,6 +70,8 @@ export const ImageContainer = styled.div`
 
 export const InfoContainer = styled.div`
   display: grid;
+  justify-content: start;
+  align-items: start;
   grid-template-columns: auto auto;
   row-gap: 1.5rem;
   column-gap: 3rem;
@@ -88,7 +90,7 @@ export const InfoContainer = styled.div`
   }
 
   @media screen and (max-width: 780px) {
+    display: grid;
     grid-template-columns: auto;
-    align-items: center;
   }
 `
