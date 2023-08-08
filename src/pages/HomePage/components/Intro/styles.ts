@@ -6,7 +6,7 @@ export const IntroOutsideContainer = styled.div`
   justify-content: center;
   padding: 0rem 10rem;
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 999px) {
     padding: 0% 7.22% 0%;
     font-size: 0.7rem;
   }
@@ -32,41 +32,36 @@ export const InformsContainer = styled.div`
   width: 36.75rem;
 `
 
-export const FocusMessageContainer = styled.div`
+export const MessageContainer = styled.div`
   display: flex;
-  width: 100%;
+  flex-direction: column;
 
   h1 {
     text-align: start;
     font-family: 'Baloo 2';
     font-size: 3vw;
     line-height: 1.2;
-    /* word-spacing: -2px; */
 
     @media screen and (max-width: 650px) {
       font-size: 4vw;
     }
-    /* @media screen and (max-width: 460px) {
-      padding-bottom: 2.3vw;
-    } */
   }
-`
 
-export const SecondaryMessageContainer = styled.div`
-  padding-top: 1rem;
-  padding-bottom: 3rem;
-  width: 100%;
-  font-size: 1.5vw;
-  @media screen and (max-width: 650px) {
-    font-size: 2vw;
-  }
-  @media screen and (max-width: 460px) {
-    padding-bottom: 2.3rem;
+  p {
+    padding: 1rem 0 3rem 0;
+    font-size: 1.5vw;
+
+    @media screen and (max-width: 650px) {
+      font-size: 2vw;
+    }
+
+    @media screen and (max-width: 460px) {
+      padding-bottom: 2.3rem;
+    }
   }
 `
 
 export const ImageContainer = styled.div`
-  /* max-width: 29.75rem; */
   img {
     width: 100%;
     padding-left: 1.5rem;

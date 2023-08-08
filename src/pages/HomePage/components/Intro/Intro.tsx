@@ -1,12 +1,11 @@
 import { icon1, icon2, icon3, icon4, imgIntro } from '../../../../assents'
 import {
-  FocusMessageContainer,
+  MessageContainer,
   ImageContainer,
   InfoContainer,
   InformsContainer,
   IntroContainer,
   IntroOutsideContainer,
-  SecondaryMessageContainer,
 } from './styles'
 
 export const Intro = () => {
@@ -14,16 +13,13 @@ export const Intro = () => {
     <IntroOutsideContainer>
       <IntroContainer>
         <InformsContainer>
-          <FocusMessageContainer>
+          <MessageContainer>
             <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-          </FocusMessageContainer>
-
-          <SecondaryMessageContainer>
             <p>
               Com o Coffee Delivery você recebe seu café onde estiver, a
               qualquer hora
             </p>
-          </SecondaryMessageContainer>
+          </MessageContainer>
 
           <InfoContainer>
             <div>
