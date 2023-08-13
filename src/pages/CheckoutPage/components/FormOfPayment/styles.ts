@@ -3,15 +3,13 @@ import styled from 'styled-components'
 export const FormOfPaymentContainer = styled.div`
   display: flex;
   flex-direction: column;
-
+  max-width: 40rem;
+  width: 100%;
   margin-top: 15px;
   padding: 40px;
-
-  width: 40rem;
+  border-radius: 5px;
 
   background-color: ${(props) => props.theme['gray-300']};
-
-  border-radius: 5px;
 
   @media screen and (max-width: 1410px) and (min-width: 1333px) {
     width: 95%;
@@ -49,8 +47,12 @@ export const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
-
   padding-top: 25px;
+
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 interface StyledButtonProps {
@@ -62,28 +64,22 @@ const BaseButton = styled.button<StyledButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  max-width: 230px;
+  width: 100%;
   font-size: 0.7rem;
+  border-radius: 5px;
+  height: 51px;
+  gap: 0.5rem;
 
   background: ${(props) =>
     props.isClicked ? props.theme['yellow-600'] : props.theme['gray-500']};
 
-  /* background: ${(props) => props.theme['gray-500']}; */
-
   color: ${(props) =>
     props.isClicked ? props.theme['purple-900'] : props.theme['gray-800']};
-
-  /* border: transparent; */
 
   border: 2px solid
     ${(props) =>
       props.isClicked ? props.theme['purple-600'] : props.theme['gray-500']};
-  border-radius: 5px;
-
-  width: 100%;
-  height: 51px;
-
-  gap: 0.5rem;
 
   svg {
     width: 1.5rem;

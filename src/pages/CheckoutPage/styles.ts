@@ -3,11 +3,17 @@ import styled from 'styled-components'
 export const CheckoutContainer = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: start;
+  width: 100%;
   justify-content: space-between;
+  gap: 200px;
+  /*  */
+  /* max-width: 1550px; */
+  /* gap: 100%; */
 
   padding: 0rem 10rem 0rem;
 
-  width: 100%;
+  background-color: red;
 
   @media screen and (max-width: 1333px) {
     align-items: center;
@@ -34,6 +40,8 @@ export const CheckoutContainer = styled.div`
 const PrimaryContainers = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 40rem;
 `
 
 export const DeliveryFormContainer = styled(PrimaryContainers)``
@@ -46,7 +54,7 @@ export const DeliveryForm = styled.div`
 
   padding: 40px;
 
-  width: 40rem;
+  /* min-width: 40rem; */
 
   border-radius: 5px;
 
@@ -56,8 +64,9 @@ export const DeliveryForm = styled.div`
 `
 
 const TopText = styled.div`
+  font-size: 1rem;
   font-family: 'Baloo 2';
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 `
 
 export const TextDeliveryForm = styled(TopText)``
@@ -68,6 +77,8 @@ export const InstructionsContainer = styled.div`
 `
 
 export const IconContainer = styled.div`
+  display: flex;
+
   svg {
     color: ${(props) => props.theme['yellow-600']};
     height: 25px;
@@ -108,26 +119,35 @@ const BaseInput = styled.input`
 `
 
 export const CepInput = styled(BaseInput)`
-  display: inline;
-  width: 200px;
+  display: flex;
+  /* display: inline; */
+  /* width: 200px; */
+  width: 35%;
 `
 
 export const RoadInput = styled(BaseInput)`
-  display: block;
+  display: flex;
+  /* display: block; */
+  width: 100%;
 `
 
 export const NumberAndComplementContainer = styled.div`
   display: flex;
   flex-direction: row;
+  /* width: 35%; */
   gap: 20px;
 `
 
 export const NumberInput = styled(BaseInput)`
-  width: 200px;
+  display: flex;
+  /* width: 200px; */
+  width: 35%;
 `
 
 export const ComplementInput = styled(BaseInput)`
-  width: 100%;
+  display: flex;
+  /* width: 100%; */
+  width: 65%;
 `
 
 export const DistrictCityUfContainer = styled.div`
@@ -137,15 +157,21 @@ export const DistrictCityUfContainer = styled.div`
 `
 
 export const DistrictInput = styled(BaseInput)`
-  width: 200px;
+  display: flex;
+  /* width: 200px; */
+  width: 35%;
 `
 
 export const CityInput = styled(BaseInput)`
-  width: 100%;
+  display: flex;
+  /* width: 100%; */
+  width: 45%;
 `
 
 export const UFInput = styled(BaseInput)`
-  max-width: 60px;
+  display: flex;
+  /* max-width: 60px; */
+  width: 20%;
 `
 
 // ---
@@ -158,7 +184,8 @@ export const SelectedCoffees = styled.div`
 
   border-radius: 6px 44px;
 
-  width: 448px;
+  max-width: 28rem;
+  width: 100%;
   padding: 40px;
   flex-direction: column;
   gap: 24px;
@@ -173,6 +200,9 @@ export const CoffeeAndBalance = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  /* max-width: 28rem;
+  width: 100%; */
   /* @media screen and (max-width: 1410px) and (min-width: 1333px) {
     width: 100%;
   } */
@@ -184,7 +214,7 @@ export const CoffeeBalanceContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
+  /* max-width: 28rem ;; */
   width: 100%;
 
   /* @media screen and (max-width: 1410px) and (min-width: 1333px) {
@@ -213,7 +243,8 @@ export const ConfirmationButton = styled.button`
 
   border: transparent;
 
-  width: 368px;
+  /* width: 368px; */
+  width: 100%;
   height: 46px;
 
   border-radius: 8px;
