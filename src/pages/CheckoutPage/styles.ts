@@ -6,16 +6,16 @@ export const CheckoutContainer = styled.div`
   align-items: start;
   width: 100%;
   justify-content: space-between;
-  gap: 200px;
+  /* gap: 200px; */
   /*  */
   /* max-width: 1550px; */
   /* gap: 100%; */
 
   padding: 0rem 10rem 0rem;
 
-  background-color: red;
+  /* background-color: red; */
 
-  @media screen and (max-width: 1333px) {
+  @media screen and (max-width: 1222px) {
     align-items: center;
     flex-direction: column;
     padding: 0% 7.22% 0%;
@@ -41,10 +41,11 @@ const PrimaryContainers = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 40rem;
 `
 
-export const DeliveryFormContainer = styled(PrimaryContainers)``
+export const DeliveryFormContainer = styled(PrimaryContainers)`
+  max-width: 40rem;
+`
 
 export const DeliveryForm = styled.div`
   display: flex;
@@ -69,7 +70,10 @@ const TopText = styled.div`
   padding-bottom: 0.5rem;
 `
 
-export const TextDeliveryForm = styled(TopText)``
+export const TextDeliveryForm = styled(TopText)`
+  width: 100%;
+  max-width: 40rem;
+`
 
 export const InstructionsContainer = styled.div`
   display: flex;
@@ -176,7 +180,13 @@ export const UFInput = styled(BaseInput)`
 
 // ---
 
-export const SelectedCoffeesContainer = styled(PrimaryContainers)``
+export const SelectedCoffeesContainer = styled(PrimaryContainers)`
+  align-items: flex-end;
+
+  @media screen and (max-width: 1333px) {
+    align-items: center;
+  }
+`
 
 export const SelectedCoffees = styled.div`
   display: flex;
@@ -188,7 +198,7 @@ export const SelectedCoffees = styled.div`
   width: 100%;
   padding: 40px;
   flex-direction: column;
-  gap: 24px;
+  /* gap: 24px; */
 
   /* @media screen and (max-width: 1410px) and (min-width: 1333px) {
     width: 90%;
@@ -208,7 +218,10 @@ export const CoffeeAndBalance = styled.div`
   } */
 `
 
-export const TextSelectedCoffees = styled(TopText)``
+export const TextSelectedCoffees = styled(TopText)`
+  width: 100%;
+  max-width: 28rem;
+`
 
 export const CoffeeBalanceContainer = styled.div`
   display: flex;
