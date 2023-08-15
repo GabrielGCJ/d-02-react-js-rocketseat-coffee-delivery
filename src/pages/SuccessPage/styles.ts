@@ -10,7 +10,7 @@ export const SucessPageContainer = styled.div`
 
   width: 100%;
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 999px) {
     padding: 0% 7.22% 0%;
     font-size: 0.7rem;
   }
@@ -35,6 +35,10 @@ export const TextContainer = styled.div`
     font-family: 'Baloo 2';
     color: ${(props) => props.theme['yellow-900']};
   }
+
+  @media screen and (max-width: 780px) {
+    padding: 1px 0 20px 0;
+  }
 `
 
 export const InformationsAndImg = styled.div`
@@ -42,11 +46,27 @@ export const InformationsAndImg = styled.div`
   flex-direction: row;
 
   justify-content: space-between;
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column-reverse;
+  }
+`
+
+export const IlustrationContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  max-width: 526px;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
 `
 
 export const DeliveryInformations = styled.div`
   display: flex;
-  width: 526px;
+  max-width: 526px;
+  width: 100%;
   padding: 40px;
   flex-direction: column;
   align-items: flex-start;

@@ -4,6 +4,7 @@ import { CoffeeContext } from '../../contexts/CoffeeContext'
 import {
   DeliveryInformations,
   FormOfPaymentInformationContainer,
+  IlustrationContainer,
   InformationsAndImg,
   LocationInformationContainer,
   SucessPageContainer,
@@ -62,8 +63,9 @@ export const SuccessPage = () => {
             </TextInformation>
           </FormOfPaymentInformationContainer>
         </DeliveryInformations>
-
-        <img src={ilustration} alt="" />
+        <IlustrationContainer>
+          <img src={ilustration} alt="" />
+        </IlustrationContainer>
       </InformationsAndImg>
     </SucessPageContainer>
   )
