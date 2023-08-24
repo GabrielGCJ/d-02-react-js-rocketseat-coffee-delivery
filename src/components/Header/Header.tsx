@@ -10,13 +10,10 @@ import {
   LocationContainer,
   LogoContainer,
 } from './styles'
-import { useContext } from 'react'
-import { CoffeeContext } from '../../contexts/CoffeeContext'
+import { useItensInCart } from '../../hooks/useItemsInCart'
 
 export const Header = () => {
-  const { activeCoffeeInfo } = useContext(CoffeeContext)
-
-  const numberCoffes = activeCoffeeInfo.length
+  const numberCoffes = useItensInCart()
 
   return (
     <HeaderContainer>
@@ -42,9 +39,6 @@ export const Header = () => {
             ) : (
               ''
             )}
-            {/* <ItensInCart>
-              <p>2</p>
-            </ItensInCart> */}
             <img src={buttonCart} alt=""></img>
           </CartLinkContainer>
         </NavLink>
