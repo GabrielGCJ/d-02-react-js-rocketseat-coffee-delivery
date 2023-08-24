@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const SucessPageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+
   justify-content: space-between;
   height: 6.5rem;
   padding: 0rem 10rem 0rem;

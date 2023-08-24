@@ -6,11 +6,18 @@ import {
   CartLinkContainer,
   CartLocationContainer,
   HeaderContainer,
+  ItensInCart,
   LocationContainer,
   LogoContainer,
 } from './styles'
+import { useContext } from 'react'
+import { CoffeeContext } from '../../contexts/CoffeeContext'
 
 export const Header = () => {
+  const { activeCoffeeInfo } = useContext(CoffeeContext)
+
+  const numberCoffes = activeCoffeeInfo.length
+
   return (
     <HeaderContainer>
       <NavLink to="/">
@@ -28,6 +35,16 @@ export const Header = () => {
 
         <NavLink to="/checkout">
           <CartLinkContainer>
+            {numberCoffes > 0 ? (
+              <ItensInCart>
+                <p>{numberCoffes}</p>
+              </ItensInCart>
+            ) : (
+              ''
+            )}
+            {/* <ItensInCart>
+              <p>2</p>
+            </ItensInCart> */}
             <img src={buttonCart} alt=""></img>
           </CartLinkContainer>
         </NavLink>
