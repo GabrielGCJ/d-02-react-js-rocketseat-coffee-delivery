@@ -54,6 +54,26 @@ export const CartLinkContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  position: relative;
+`
+export const ItensInCart = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 20px;
+  height: 20px;
+  background: ${(props) => props.theme['yellow-900']};
+  border-radius: 50%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  margin-top: -10px;
+  margin-right: -8px;
 `
 
 export const LocationContainer = styled.div`
