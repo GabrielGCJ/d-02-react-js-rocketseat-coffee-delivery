@@ -18,7 +18,7 @@ import {
 
 export interface coffeeDataType {
   id: string
-  img: any
+  img: string
   name: string
   tag1: boolean
   tag2: boolean

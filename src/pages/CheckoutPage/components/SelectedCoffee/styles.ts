@@ -2,13 +2,10 @@ import styled from 'styled-components'
 
 export const SelectedCoffeeExternalContainer = styled.div`
   display: flex;
-
   padding-bottom: 30px;
 `
 
 export const SelectedCoffeeContainer = styled.div`
-  /* background: red; */
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,7 +25,6 @@ export const SelectedCoffeeContainer = styled.div`
 export const ImgTitleButonsContainer = styled.div`
   display: flex;
   justify-content: start;
-
   width: 15.9375rem;
   height: 4rem;
 `
@@ -49,17 +45,14 @@ export const TitleAndButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-
   padding-left: 15px;
 `
 
 export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
-
   justify-content: start;
   padding: 0.3rem;
-
   font-size: 1rem;
 `
 
@@ -77,6 +70,7 @@ export const QuantityContainer = styled.div`
 
   span {
     padding: 0 0.7rem;
+    cursor: default;
   }
 
   button {
@@ -84,6 +78,8 @@ export const QuantityContainer = styled.div`
     background-color: ${(props) => props.theme['gray-500']};
     color: ${(props) => props.theme['purple-600']};
     font-size: 1.5rem;
+
+    cursor: pointer;
   }
 `
 
@@ -96,6 +92,7 @@ export const RemoveButtonContainer = styled.div`
   text-align: center;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   font-size: 0.8rem;
 

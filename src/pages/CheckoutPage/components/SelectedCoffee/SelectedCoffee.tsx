@@ -19,7 +19,7 @@ import {
 
 interface SelectedCoffeeType {
   id: string
-  img: any
+  img: string
   name: string
   price: number
   quantity: number
@@ -61,9 +61,13 @@ export const SelectedCoffee = ({
 
             <ButtonsContainer>
               <QuantityContainer>
-                <button onClick={handleDecreaseCoffee}>-</button>
+                <button type="button" onClick={handleDecreaseCoffee}>
+                  -
+                </button>
                 <span id="quantity">{quantity}</span>
-                <button onClick={handleAddCoffee}>+</button>
+                <button type="button" onClick={handleAddCoffee}>
+                  +
+                </button>
               </QuantityContainer>
 
               <RemoveButtonContainer onClick={handleDeleteCoffee}>

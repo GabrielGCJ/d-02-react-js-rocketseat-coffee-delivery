@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { CoffeeContext } from '../../contexts/CoffeeContext'
 import * as zod from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -6,9 +6,11 @@ import { useForm } from 'react-hook-form'
 
 import { DeliveryValuePay } from '../../data/coffeeData'
 import { MapPinLine } from 'phosphor-react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import { FormOfPayment } from './components/FormOfPayment/FormOfPayment'
 import { SelectedCoffee } from './components/SelectedCoffee/SelectedCoffee'
+
+import { useNavigate } from 'react-router'
 
 import {
   CepInput,
@@ -71,6 +73,8 @@ export const CheckoutPage = () => {
 
   const handleCreateNewBuy = async (data: any) => {
     setAddressUser(data)
+
+    // <NavLink to="/success" />
   }
 
   console.log(addressUser)
@@ -86,6 +90,20 @@ export const CheckoutPage = () => {
   // const district = watch('district')
   // const city = watch('city')
   // const uf = watch('uf')
+
+  const navigate = useNavigate()
+
+  const goToSuccessPage = () => {
+    if (addressUser.road !== '') {
+      setTimeout(() => {
+        navigate('/success')
+      }, 2000) // 2000 milissegundos = 2 segundos
+    }
+  }
+
+  useEffect(() => {
+    goToSuccessPage()
+  }, [addressUser, goToSuccessPage])
 
   return (
     <form onSubmit={handleSubmit(handleCreateNewBuy)}>
@@ -231,14 +249,14 @@ export const CheckoutPage = () => {
                   )}
                 </TotalValue>
                 {addressUser.road !== '' && formOfPayment !== '' ? (
-                  <NavLink to="/success">
-                    {/* <Confirmation> */}
+                  // <NavLink to="/success">
+                  <Confirmation>
                     <ConfirmationButton type="submit">
                       <h3>CONFIRMAR PEDIDO</h3>
                     </ConfirmationButton>
-                    {/* </Confirmation> */}
-                  </NavLink>
+                  </Confirmation>
                 ) : (
+                  // </NavLink>;
                   <ConfirmationButton
                     type="submit"
                     // disabled={
