@@ -2,7 +2,7 @@
 import { ReactNode, createContext, useState, useEffect } from 'react'
 import { CoffeeData, coffeeDataType } from '../data/coffeeData'
 
-interface address {
+export interface address {
   cep: string
   road: string
   numberHouse: string
