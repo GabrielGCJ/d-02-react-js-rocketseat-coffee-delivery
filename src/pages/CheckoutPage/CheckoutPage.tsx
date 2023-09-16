@@ -45,13 +45,8 @@ import {
 } from './styles'
 
 export const CheckoutPage = () => {
-  const {
-    activeCoffeeInfo,
-    totalPay,
-    setAddressUser,
-    addressUser,
-    formOfPayment,
-  } = useContext(CoffeeContext)
+  const { coffeeCart, totalPay, setAddressUser, addressUser, formOfPayment } =
+    useContext(CoffeeContext)
 
   const addressForm = zod.object({
     cep: zod.string().min(8, 'Informe o CPF'),
@@ -213,7 +208,7 @@ export const CheckoutPage = () => {
           </TextSelectedCoffees>
           <SelectedCoffees>
             <CoffeeAndBalance>
-              {activeCoffeeInfo.map((coffee) => {
+              {coffeeCart.map((coffee) => {
                 return (
                   <SelectedCoffee
                     key={coffee.id}
@@ -232,15 +227,11 @@ export const CheckoutPage = () => {
                 </TotalItems>
                 <DeliveryValue>
                   <p>Entrega</p>
-                  {activeCoffeeInfo.length > 0 ? (
-                    <p>R$ 3,50</p>
-                  ) : (
-                    <p>R$ 0,00</p>
-                  )}
+                  {coffeeCart.length > 0 ? <p>R$ 3,50</p> : <p>R$ 0,00</p>}
                 </DeliveryValue>
                 <TotalValue>
                   <h2>Total</h2>
-                  {activeCoffeeInfo.length > 0 ? (
+                  {coffeeCart.length > 0 ? (
                     <h2>{`R$ ${(DeliveryValuePay + totalPay)
                       .toFixed(2)
                       .replace('.', ',')}`}</h2>

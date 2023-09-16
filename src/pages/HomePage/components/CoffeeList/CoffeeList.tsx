@@ -10,7 +10,7 @@ import {
 } from './styled'
 
 export const CoffeeList = () => {
-  const { coffeeInfo } = useContext(CoffeeContext)
+  const { coffeeList } = useContext(CoffeeContext)
 
   return (
     <CoffeeListExternalContainer>
@@ -21,7 +21,7 @@ export const CoffeeList = () => {
 
         <AllCoffeesContainer>
           <AllCoffees>
-            {coffeeInfo.map((coffee) => {
+            {coffeeList.map((coffee) => {
               return (
                 <Coffee
                   key={coffee.id}
