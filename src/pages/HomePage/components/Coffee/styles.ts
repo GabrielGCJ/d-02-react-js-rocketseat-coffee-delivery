@@ -5,7 +5,6 @@ export const CoffeeExternalContainer = styled.div``
 export const CoffeeInternalContainer = styled.div`
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
 
   border-radius: 0px 30px 0px 30px;
@@ -84,6 +83,7 @@ export const QuantityContainer = styled.div`
   button {
     border: transparent;
     background-color: ${(props) => props.theme['gray-500']};
+    cursor: pointer;
   }
 `
 

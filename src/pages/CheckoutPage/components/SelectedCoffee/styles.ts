@@ -108,8 +108,12 @@ export const TrashContainer = styled.div`
 `
 
 export const PriceContainer = styled.div`
+  /* background-color: red; */
   display: flex;
   font-size: 0.7rem;
   padding-bottom: 2.5rem;
   padding-left: 2.8rem;
+  h2 {
+    white-space: nowrap;
+  }
 `
