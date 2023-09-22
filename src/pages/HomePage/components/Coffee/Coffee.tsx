@@ -23,6 +23,7 @@ import {
   TagsContainer,
   TitleContainer,
 } from './styles'
+import { NavLink } from 'react-router-dom'
 
 export const Coffee = ({
   id,
@@ -77,7 +78,9 @@ export const Coffee = ({
             <button onClick={handleAddCoffee}>+</button>
           </QuantityContainer>
           <ShoppingCarContainer>
-            <img src={shoppingCartImg} alt="" />
+            <NavLink to="/checkout">
+              <img src={shoppingCartImg} alt="" />
+            </NavLink>
           </ShoppingCarContainer>
         </PriceAndQuantityContainer>
       </CoffeeInternalContainer>

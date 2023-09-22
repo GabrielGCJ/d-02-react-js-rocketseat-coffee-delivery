@@ -33,6 +33,7 @@ export const SelectedCoffee = ({
   quantity,
 }: SelectedCoffeeType) => {
   const { deleteCoffee, addCoffee, decreaseCoffee } = useContext(CoffeeContext)
+  const finalPrice = price * quantity
 
   const handleAddCoffee = () => {
     addCoffee(id)
@@ -80,7 +81,7 @@ export const SelectedCoffee = ({
           </TitleAndButtonsContainer>
         </ImgTitleButonsContainer>
         <PriceContainer>
-          <h2>{`R$ ${price.toFixed(2).replace('.', ',')}`}</h2>
+          <h2>{`R$ ${finalPrice.toFixed(2).replace('.', ',')}`}</h2>
         </PriceContainer>
       </SelectedCoffeeContainer>
     </SelectedCoffeeExternalContainer>
