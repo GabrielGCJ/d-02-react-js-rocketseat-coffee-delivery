@@ -65,24 +65,27 @@ export const IlustrationContainer = styled.div`
 
 export const DeliveryInformations = styled.div`
   display: flex;
-  max-width: 526px;
-  width: 100%;
-  padding: 40px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 32px;
 
-  border: 1px solid red;
+  max-width: 32.875rem;
+  width: 100%;
+  padding: 2.5rem;
 
-  /* border: 1px solid;
-  border-image: linear-gradient(
-    to right,
-    ${(props) => props.theme['yellow-600']},
-    ${(props) => props.theme['purple-600']}
-  );
-  border-image-slice: 1; */
+  background-color: ${(props) => props.theme['gray-300']};
 
-  border-radius: 6px 36px;
+  gap: 2rem;
+  border-radius: 6px 36px 6px 36px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: 7px 37px 7px 37px;
+    background: linear-gradient(102.89deg, #dbac2c 2.61%, #8047f8 98.76%);
+  }
 `
 
 const PaymentInformations = styled.div`
