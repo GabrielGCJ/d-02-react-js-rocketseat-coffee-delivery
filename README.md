@@ -14,6 +14,41 @@ https://www.figma.com/file/6IkKVafeBCi8FveDNhD9ZW/Coffee-Delivery-%E2%80%A2-Desa
 
 ![image](https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery/assets/91347602/deaa5363-4397-4a03-82e2-66b8974336d6)
 -----
------
------
+
  <a href="https://gb-coffee.surge.sh">Clique aqui para testar</a>
+
+ ----
+
+### Para rodar o projeto:
+
+>Clone este repositório em sua máquina:
+
+```
+git clone https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery
+.git
+```
+
+>Entre na pasta do projeto:
+
+```
+cd d-02-react-js-rocketseat-coffee-delivery
+```
+
+>Instale o projeto:
+
+```
+npm install
+```
+
+>Rode o projeto:
+
+```
+npm run dev
+```
+
+Acesse o endereço localhost porta 3333 em seu navegador ou ferramenta de testes para interagir com a aplicação:
+
+http://localhost:3002
+
+----
+
