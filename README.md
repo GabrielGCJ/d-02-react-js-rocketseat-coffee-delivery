@@ -24,8 +24,7 @@ https://www.figma.com/file/6IkKVafeBCi8FveDNhD9ZW/Coffee-Delivery-%E2%80%A2-Desa
 >Clone este repositório em sua máquina:
 
 ```
-git clone https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery
-.git
+git clone https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery.git
 ```
 
 >Entre na pasta do projeto:
