@@ -45,7 +45,7 @@ npm install
 npm run dev
 ```
 
-Acesse o endereço localhost porta 3333 em seu navegador ou ferramenta de testes para interagir com a aplicação:
+Acesse o endereço localhost porta 3002 em seu navegador ou ferramenta de testes para interagir com a aplicação:
 
 http://localhost:3002
 
